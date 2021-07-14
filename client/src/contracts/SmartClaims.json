@@ -2,6 +2,97 @@
   "contractName": "SmartClaims",
   "abi": [
     {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "autoMap",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "firstName",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_address",
+          "type": "address"
+        },
+        {
+          "components": [
+            {
+              "internalType": "string",
+              "name": "firstName",
+              "type": "string"
+            }
+          ],
+          "internalType": "struct SmartClaims.AutoClaim",
+          "name": "_claim",
+          "type": "tuple"
+        }
+      ],
+      "name": "fileAutoClaim",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_address",
+          "type": "address"
+        }
+      ],
+      "name": "getAutoClaim",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "string",
+              "name": "firstName",
+              "type": "string"
+            }
+          ],
+          "internalType": "struct SmartClaims.AutoClaim",
+          "name": "b",
+          "type": "tuple"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "_firstName",
+          "type": "string"
+        }
+      ],
+      "name": "createAutoClaim",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
       "constant": false,
       "inputs": [
         {
@@ -32,21 +123,21 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"get\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"x\",\"type\":\"uint256\"}],\"name\":\"set\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Users/n1554733/TruffleProject/david-long-fanclub/contracts/SmartClaims.sol\":\"SmartClaims\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/n1554733/TruffleProject/david-long-fanclub/contracts/SmartClaims.sol\":{\"keccak256\":\"0xe6f1175c7911e8cb5245b2631d4b77049545a7c7163b472cab3bf42bede3e582\",\"urls\":[\"bzz-raw://bf61bd49f353e086ed907c8c74e6b3ff589761ccccf0c3c9d4ef41f5e1725291\",\"dweb:/ipfs/QmSJXohwdPExa75LDK2FqBAE62GwoyRZ1cRJtM86R1d4Bf\"]}},\"version\":1}",
-  "bytecode": "0x608060405234801561001057600080fd5b5060c68061001f6000396000f3fe6080604052348015600f57600080fd5b506004361060325760003560e01c806360fe47b11460375780636d4ce63c146062575b600080fd5b606060048036036020811015604b57600080fd5b8101908080359060200190929190505050607e565b005b60686088565b6040518082815260200191505060405180910390f35b8060008190555050565b6000805490509056fea265627a7a72315820dcce47023db4c74e63a1e8eb255ab57b6f84ded8831656b592021b3211c1d08a64736f6c63430005100032",
-  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060325760003560e01c806360fe47b11460375780636d4ce63c146062575b600080fd5b606060048036036020811015604b57600080fd5b8101908080359060200190929190505050607e565b005b60686088565b6040518082815260200191505060405180910390f35b8060008190555050565b6000805490509056fea265627a7a72315820dcce47023db4c74e63a1e8eb255ab57b6f84ded8831656b592021b3211c1d08a64736f6c63430005100032",
-  "sourceMap": "69:202:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;69:202:0;;;;;;;",
-  "deployedSourceMap": "69:202:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;69:202:0;;;;;;;;;;;;;;;;;;;;;;;;121:61;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;121:61:0;;;;;;;;;;;;;;;;;:::i;:::-;;190:78;;;:::i;:::-;;;;;;;;;;;;;;;;;;;121:61;173:1;160:10;:14;;;;121:61;:::o;190:78::-;226:4;250:10;;243:17;;190:78;:::o",
-  "source": "// SPDX-License-Identifier: MIT\r\npragma solidity >=0.4.21 <0.7.0;\r\n\r\ncontract SmartClaims {\r\n    uint storedData;\r\n\r\n    function set(uint x) public {\r\n        storedData = x;\r\n    }\r\n\r\n    function get() public view returns (uint) {\r\n        return storedData;\r\n    }\r\n}\r\n",
-  "sourcePath": "C:/Users/n1554733/TruffleProject/david-long-fanclub/contracts/SmartClaims.sol",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"autoMap\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"firstName\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"string\",\"name\":\"_firstName\",\"type\":\"string\"}],\"name\":\"createAutoClaim\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"_address\",\"type\":\"address\"},{\"components\":[{\"internalType\":\"string\",\"name\":\"firstName\",\"type\":\"string\"}],\"internalType\":\"struct SmartClaims.AutoClaim\",\"name\":\"_claim\",\"type\":\"tuple\"}],\"name\":\"fileAutoClaim\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"get\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"_address\",\"type\":\"address\"}],\"name\":\"getAutoClaim\",\"outputs\":[{\"components\":[{\"internalType\":\"string\",\"name\":\"firstName\",\"type\":\"string\"}],\"internalType\":\"struct SmartClaims.AutoClaim\",\"name\":\"b\",\"type\":\"tuple\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"x\",\"type\":\"uint256\"}],\"name\":\"set\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Users/n1554252/OneDrive - Liberty Mutual/Desktop/david-long-fanclub/contracts/SmartClaims.sol\":\"SmartClaims\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/n1554252/OneDrive - Liberty Mutual/Desktop/david-long-fanclub/contracts/SmartClaims.sol\":{\"keccak256\":\"0x369dbce6ed6c5791a92315d8ea3907bc37df31161e4373abca22eca987a7c2f8\",\"urls\":[\"bzz-raw://1926df8d074914f659e18fa80cbdf8bd84f0d5ca017b3b20b76afe4ebc4a2548\",\"dweb:/ipfs/Qmbv4vbw5w7FVYPQYQH2TvHq283uqQX6teD3E2d6iWzg4U\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506108fc806100206000396000f3fe608060405234801561001057600080fd5b50600436106100625760003560e01c806360e1227d1461006757806360fe47b114610083578063656ad1481461009f5780636d4ce63c146100bb578063de67c1a7146100d9578063e1a7b61b14610109575b600080fd5b610081600480360361007c91908101906105d6565b610139565b005b61009d60048036036100989190810190610617565b610158565b005b6100b960048036036100b49190810190610582565b610162565b005b6100c36101c5565b6040516100d0919061072f565b60405180910390f35b6100f360048036036100ee9190810190610559565b6101cf565b60405161010091906106eb565b60405180910390f35b610123600480360361011e9190810190610559565b610285565b604051610130919061070d565b60405180910390f35b61014161037f565b8181600001819052506101543382610162565b5050565b8060018190555050565b806000808473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060008201518160000190805190602001906101bd929190610392565b509050505050565b6000600154905090565b6000602052806000526040600020600091509050806000018054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561027b5780601f106102505761010080835404028352916020019161027b565b820191906000526020600020905b81548152906001019060200180831161025e57829003601f168201915b5050505050905081565b61028d61037f565b6000808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020604051806020016040529081600082018054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561036f5780601f106103445761010080835404028352916020019161036f565b820191906000526020600020905b81548152906001019060200180831161035257829003601f168201915b5050505050815250509050919050565b6040518060200160405280606081525090565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106103d357805160ff1916838001178555610401565b82800160010185558215610401579182015b828111156104005782518255916020019190600101906103e5565b5b50905061040e9190610412565b5090565b61043491905b80821115610430576000816000905550600101610418565b5090565b90565b6000813590506104468161088b565b92915050565b600082601f83011261045d57600080fd5b813561047061046b82610777565b61074a565b9150808252602083016020830185838301111561048c57600080fd5b610497838284610838565b50505092915050565b600082601f8301126104b157600080fd5b81356104c46104bf826107a3565b61074a565b915080825260208301602083018583830111156104e057600080fd5b6104eb838284610838565b50505092915050565b60006020828403121561050657600080fd5b610510602061074a565b9050600082013567ffffffffffffffff81111561052c57600080fd5b6105388482850161044c565b60008301525092915050565b600081359050610553816108a2565b92915050565b60006020828403121561056b57600080fd5b600061057984828501610437565b91505092915050565b6000806040838503121561059557600080fd5b60006105a385828601610437565b925050602083013567ffffffffffffffff8111156105c057600080fd5b6105cc858286016104f4565b9150509250929050565b6000602082840312156105e857600080fd5b600082013567ffffffffffffffff81111561060257600080fd5b61060e848285016104a0565b91505092915050565b60006020828403121561062957600080fd5b600061063784828501610544565b91505092915050565b600061064b826107cf565b61065581856107da565b9350610665818560208601610847565b61066e8161087a565b840191505092915050565b6000610684826107cf565b61068e81856107eb565b935061069e818560208601610847565b6106a78161087a565b840191505092915050565b600060208301600083015184820360008601526106cf8282610640565b9150508091505092915050565b6106e58161082e565b82525050565b600060208201905081810360008301526107058184610679565b905092915050565b6000602082019050818103600083015261072781846106b2565b905092915050565b600060208201905061074460008301846106dc565b92915050565b6000604051905081810181811067ffffffffffffffff8211171561076d57600080fd5b8060405250919050565b600067ffffffffffffffff82111561078e57600080fd5b601f19601f8301169050602081019050919050565b600067ffffffffffffffff8211156107ba57600080fd5b601f19601f8301169050602081019050919050565b600081519050919050565b600082825260208201905092915050565b600082825260208201905092915050565b60006108078261080e565b9050919050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6000819050919050565b82818337600083830152505050565b60005b8381101561086557808201518184015260208101905061084a565b83811115610874576000848401525b50505050565b6000601f19601f8301169050919050565b610894816107fc565b811461089f57600080fd5b50565b6108ab8161082e565b81146108b657600080fd5b5056fea365627a7a72315820c3c9937c1ee3eda7e57aaaf5960f2739837c59b91308d190194ee1af33bc03866c6578706572696d656e74616cf564736f6c63430005100040",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100625760003560e01c806360e1227d1461006757806360fe47b114610083578063656ad1481461009f5780636d4ce63c146100bb578063de67c1a7146100d9578063e1a7b61b14610109575b600080fd5b610081600480360361007c91908101906105d6565b610139565b005b61009d60048036036100989190810190610617565b610158565b005b6100b960048036036100b49190810190610582565b610162565b005b6100c36101c5565b6040516100d0919061072f565b60405180910390f35b6100f360048036036100ee9190810190610559565b6101cf565b60405161010091906106eb565b60405180910390f35b610123600480360361011e9190810190610559565b610285565b604051610130919061070d565b60405180910390f35b61014161037f565b8181600001819052506101543382610162565b5050565b8060018190555050565b806000808473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060008201518160000190805190602001906101bd929190610392565b509050505050565b6000600154905090565b6000602052806000526040600020600091509050806000018054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561027b5780601f106102505761010080835404028352916020019161027b565b820191906000526020600020905b81548152906001019060200180831161025e57829003601f168201915b5050505050905081565b61028d61037f565b6000808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020604051806020016040529081600082018054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561036f5780601f106103445761010080835404028352916020019161036f565b820191906000526020600020905b81548152906001019060200180831161035257829003601f168201915b5050505050815250509050919050565b6040518060200160405280606081525090565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106103d357805160ff1916838001178555610401565b82800160010185558215610401579182015b828111156104005782518255916020019190600101906103e5565b5b50905061040e9190610412565b5090565b61043491905b80821115610430576000816000905550600101610418565b5090565b90565b6000813590506104468161088b565b92915050565b600082601f83011261045d57600080fd5b813561047061046b82610777565b61074a565b9150808252602083016020830185838301111561048c57600080fd5b610497838284610838565b50505092915050565b600082601f8301126104b157600080fd5b81356104c46104bf826107a3565b61074a565b915080825260208301602083018583830111156104e057600080fd5b6104eb838284610838565b50505092915050565b60006020828403121561050657600080fd5b610510602061074a565b9050600082013567ffffffffffffffff81111561052c57600080fd5b6105388482850161044c565b60008301525092915050565b600081359050610553816108a2565b92915050565b60006020828403121561056b57600080fd5b600061057984828501610437565b91505092915050565b6000806040838503121561059557600080fd5b60006105a385828601610437565b925050602083013567ffffffffffffffff8111156105c057600080fd5b6105cc858286016104f4565b9150509250929050565b6000602082840312156105e857600080fd5b600082013567ffffffffffffffff81111561060257600080fd5b61060e848285016104a0565b91505092915050565b60006020828403121561062957600080fd5b600061063784828501610544565b91505092915050565b600061064b826107cf565b61065581856107da565b9350610665818560208601610847565b61066e8161087a565b840191505092915050565b6000610684826107cf565b61068e81856107eb565b935061069e818560208601610847565b6106a78161087a565b840191505092915050565b600060208301600083015184820360008601526106cf8282610640565b9150508091505092915050565b6106e58161082e565b82525050565b600060208201905081810360008301526107058184610679565b905092915050565b6000602082019050818103600083015261072781846106b2565b905092915050565b600060208201905061074460008301846106dc565b92915050565b6000604051905081810181811067ffffffffffffffff8211171561076d57600080fd5b8060405250919050565b600067ffffffffffffffff82111561078e57600080fd5b601f19601f8301169050602081019050919050565b600067ffffffffffffffff8211156107ba57600080fd5b601f19601f8301169050602081019050919050565b600081519050919050565b600082825260208201905092915050565b600082825260208201905092915050565b60006108078261080e565b9050919050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6000819050919050565b82818337600083830152505050565b60005b8381101561086557808201518184015260208101905061084a565b83811115610874576000848401525b50505050565b6000601f19601f8301169050919050565b610894816107fc565b811461089f57600080fd5b50565b6108ab8161082e565b81146108b657600080fd5b5056fea365627a7a72315820c3c9937c1ee3eda7e57aaaf5960f2739837c59b91308d190194ee1af33bc03866c6578706572696d656e74616cf564736f6c63430005100040",
+  "sourceMap": "71:3284:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;71:3284:0;;;;;;;",
+  "deployedSourceMap": "71:3284:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;71:3284:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2980:195;;;;;;;;;;;;;;;;:::i;:::-;;3205:61;;;;;;;;;;;;;;;;:::i;:::-;;2461:181;;;;;;;;;;;;;;;;:::i;:::-;;3274:78;;;:::i;:::-;;;;;;;;;;;;;;;;2300:44;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;2808:164;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;2980:195;3052:25;;:::i;:::-;3109:10;3088:8;:18;;:31;;;;3130:35;3144:10;3156:8;3130:13;:35::i;:::-;2980:195;;:::o;3205:61::-;3257:1;3244:10;:14;;;;3205:61;:::o;2461:181::-;2585:6;2565:7;:17;2573:8;2565:17;;;;;;;;;;;;;;;:26;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;2461:181;;:::o;3274:78::-;3310:4;3334:10;;3327:17;;3274:78;:::o;2300:44::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;2808:164::-;2869:18;;:::i;:::-;2924:7;:17;2932:8;2924:17;;;;;;;;;;;;;;;2917:24;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2808:164;;;:::o;71:3284::-;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;5:130:-1:-;;85:6;72:20;63:29;;97:33;124:5;97:33;;;57:78;;;;;143:434;;241:3;234:4;226:6;222:17;218:27;208:2;;259:1;256;249:12;208:2;296:6;283:20;318:61;333:45;371:6;333:45;;;318:61;;;309:70;;399:6;392:5;385:21;435:4;427:6;423:17;468:4;461:5;457:16;503:3;494:6;489:3;485:16;482:25;479:2;;;520:1;517;510:12;479:2;530:41;564:6;559:3;554;530:41;;;201:376;;;;;;;;586:442;;688:3;681:4;673:6;669:17;665:27;655:2;;706:1;703;696:12;655:2;743:6;730:20;765:65;780:49;822:6;780:49;;;765:65;;;756:74;;850:6;843:5;836:21;886:4;878:6;874:17;919:4;912:5;908:16;954:3;945:6;940:3;936:16;933:25;930:2;;;971:1;968;961:12;930:2;981:41;1015:6;1010:3;1005;981:41;;;648:380;;;;;;;;1071:419;;1184:4;1172:9;1167:3;1163:19;1159:30;1156:2;;;1202:1;1199;1192:12;1156:2;1220:20;1235:4;1220:20;;;1211:29;;1323:1;1312:9;1308:17;1295:31;1346:18;1338:6;1335:30;1332:2;;;1378:1;1375;1368:12;1332:2;1413:55;1464:3;1455:6;1444:9;1440:22;1413:55;;;1406:4;1399:5;1395:16;1388:81;1250:230;1150:340;;;;;1497:130;;1577:6;1564:20;1555:29;;1589:33;1616:5;1589:33;;;1549:78;;;;;1634:241;;1738:2;1726:9;1717:7;1713:23;1709:32;1706:2;;;1754:1;1751;1744:12;1706:2;1789:1;1806:53;1851:7;1842:6;1831:9;1827:22;1806:53;;;1796:63;;1768:97;1700:175;;;;;1882:500;;;2027:2;2015:9;2006:7;2002:23;1998:32;1995:2;;;2043:1;2040;2033:12;1995:2;2078:1;2095:53;2140:7;2131:6;2120:9;2116:22;2095:53;;;2085:63;;2057:97;2213:2;2202:9;2198:18;2185:32;2237:18;2229:6;2226:30;2223:2;;;2269:1;2266;2259:12;2223:2;2289:77;2358:7;2349:6;2338:9;2334:22;2289:77;;;2279:87;;2164:208;1989:393;;;;;;2389:347;;2503:2;2491:9;2482:7;2478:23;2474:32;2471:2;;;2519:1;2516;2509:12;2471:2;2582:1;2571:9;2567:17;2554:31;2605:18;2597:6;2594:30;2591:2;;;2637:1;2634;2627:12;2591:2;2657:63;2712:7;2703:6;2692:9;2688:22;2657:63;;;2647:73;;2533:193;2465:271;;;;;2743:241;;2847:2;2835:9;2826:7;2822:23;2818:32;2815:2;;;2863:1;2860;2853:12;2815:2;2898:1;2915:53;2960:7;2951:6;2940:9;2936:22;2915:53;;;2905:63;;2877:97;2809:175;;;;;2991:319;;3089:35;3118:5;3089:35;;;3136:61;3190:6;3185:3;3136:61;;;3129:68;;3202:52;3247:6;3242:3;3235:4;3228:5;3224:16;3202:52;;;3275:29;3297:6;3275:29;;;3270:3;3266:39;3259:46;;3069:241;;;;;;3317:339;;3425:35;3454:5;3425:35;;;3472:71;3536:6;3531:3;3472:71;;;3465:78;;3548:52;3593:6;3588:3;3581:4;3574:5;3570:16;3548:52;;;3621:29;3643:6;3621:29;;;3616:3;3612:39;3605:46;;3405:251;;;;;;3730:416;;3879:4;3874:3;3870:14;3967:4;3960:5;3956:16;3950:23;4019:3;4013:4;4009:14;4002:4;3997:3;3993:14;3986:38;4039:69;4103:4;4089:12;4039:69;;;4031:77;;3899:221;4137:4;4130:11;;3852:294;;;;;;4153:113;4236:24;4254:5;4236:24;;;4231:3;4224:37;4218:48;;;4273:293;;4407:2;4396:9;4392:18;4384:26;;4457:9;4451:4;4447:20;4443:1;4432:9;4428:17;4421:47;4482:74;4551:4;4542:6;4482:74;;;4474:82;;4378:188;;;;;4573:357;;4739:2;4728:9;4724:18;4716:26;;4789:9;4783:4;4779:20;4775:1;4764:9;4760:17;4753:47;4814:106;4915:4;4906:6;4814:106;;;4806:114;;4710:220;;;;;4937:213;;5055:2;5044:9;5040:18;5032:26;;5069:71;5137:1;5126:9;5122:17;5113:6;5069:71;;;5026:124;;;;;5157:256;;5219:2;5213:9;5203:19;;5257:4;5249:6;5245:17;5356:6;5344:10;5341:22;5320:18;5308:10;5305:34;5302:62;5299:2;;;5377:1;5374;5367:12;5299:2;5397:10;5393:2;5386:22;5197:216;;;;;5420:318;;5560:18;5552:6;5549:30;5546:2;;;5592:1;5589;5582:12;5546:2;5659:4;5655:9;5648:4;5640:6;5636:17;5632:33;5624:41;;5723:4;5717;5713:15;5705:23;;5483:255;;;;5745:322;;5889:18;5881:6;5878:30;5875:2;;;5921:1;5918;5911:12;5875:2;5988:4;5984:9;5977:4;5969:6;5965:17;5961:33;5953:41;;6052:4;6046;6042:15;6034:23;;5812:255;;;;6074:118;;6164:5;6158:12;6148:22;;6129:63;;;;6200:153;;6305:6;6300:3;6293:19;6342:4;6337:3;6333:14;6318:29;;6286:67;;;;;6362:163;;6477:6;6472:3;6465:19;6514:4;6509:3;6505:14;6490:29;;6458:67;;;;;6533:91;;6595:24;6613:5;6595:24;;;6584:35;;6578:46;;;;6631:121;;6704:42;6697:5;6693:54;6682:65;;6676:76;;;;6759:72;;6821:5;6810:16;;6804:27;;;;6839:145;6920:6;6915:3;6910;6897:30;6976:1;6967:6;6962:3;6958:16;6951:27;6890:94;;;;6993:268;7058:1;7065:101;7079:6;7076:1;7073:13;7065:101;;;7155:1;7150:3;7146:11;7140:18;7136:1;7131:3;7127:11;7120:39;7101:2;7098:1;7094:10;7089:15;;7065:101;;;7181:6;7178:1;7175:13;7172:2;;;7246:1;7237:6;7232:3;7228:16;7221:27;7172:2;7042:219;;;;;7269:97;;7357:2;7353:7;7348:2;7341:5;7337:14;7333:28;7323:38;;7317:49;;;;7374:117;7443:24;7461:5;7443:24;;;7436:5;7433:35;7423:2;;7482:1;7479;7472:12;7423:2;7417:74;;7498:117;7567:24;7585:5;7567:24;;;7560:5;7557:35;7547:2;;7606:1;7603;7596:12;7547:2;7541:74;",
+  "source": "pragma solidity >=0.4.21 <0.7.0;\r\npragma experimental ABIEncoderV2;\r\n\r\ncontract SmartClaims {\r\n    struct AutoClaim \r\n    {\r\n        string firstName;\r\n        /*\r\n        string lastName;\r\n        string gender;  \r\n        string dob;\r\n        string licenseNumber;\r\n        string phoneNumber;\r\n        uint policyNumber;\r\n        string city;\r\n        string state;\r\n        string zip;\r\n        \r\n        string vehicleMake;\r\n        string vehicleModel;\r\n        string vehicleYear;\r\n        string vehicleColor;\r\n        string licensePlate;\r\n        \r\n        string accidentDate;\r\n        string accidentTime;\r\n        string accidentLocation;\r\n        string driverName;\r\n        bool towed;\r\n        uint passengerNum;\r\n        uint carsNum;\r\n        string damagedArea;\r\n        \r\n        string accidentExplanation; \r\n        */\r\n    }\r\n    \r\n    struct PersonW \r\n    {\r\n        string name;\r\n        string phoneNum;\r\n    }\r\n    \r\n    struct PropertyClaim \r\n    {\r\n        string firstName;\r\n        /*\r\n        string lastName;\r\n        string gender;\r\n        uint estimateLoss;\r\n        string lossExp;\r\n        string damagedDescription;\r\n        string personContacted;\r\n        uint reportNum;\r\n        string personResponsible;\r\n        string comments;\r\n        PersonW[] witnesses;\r\n        string personReportName;\r\n        string personReportPhone;\r\n        string personReportEmail;\r\n        string personReportDate;\r\n        */\r\n    }\r\n    \r\n    struct HealthClaim\r\n    {\r\n        string firstName;\r\n        /*\r\n        string lastName;\r\n        string gender;\r\n        string dob;\r\n        string city;\r\n        string state;\r\n        string zip;\r\n        string phoneNumber;\r\n        uint accountNumber;\r\n        uint socialSecurity;\r\n        string employerName;\r\n        string status;\r\n        \r\n        bool employmentRelated;\r\n        string description;\r\n        bool autoAccident;\r\n        bool medicareCovered;\r\n        string insuranceCompanyName;\r\n        uint dateAccident;\r\n        \r\n        string signature;\r\n        */\r\n    }\r\n\t\r\n  \t\r\n  \t// AutoClaim autoClaims[] = new AutoClaim[](3);\r\n    // HealthClaim healthClaims[] = new HealthClaim[](3);\r\n    // PropertyClaim propClaims[] = new PropertyClaim[](3);\r\n\r\n\t//mapping is kind of like creating a dict\r\n    mapping(address => AutoClaim) public autoMap;    \r\n    // address[] public autoFilers; // addresses of auto claim filers --> all addresses in autoMap\r\n    \r\n    function fileAutoClaim(address _address, AutoClaim memory _claim) public {  // puts in autoMap\r\n        autoMap[_address] = _claim;\r\n        // autoFilers.push(_address) - 1;\r\n    }\r\n    \r\n    /*\r\n    function getAutoFilers() public view returns (address[] memory a) { \r\n        return autoFilers;  // returns all addresses\r\n    }\r\n    */ \r\n\r\n    function getAutoClaim(address _address) public view returns (AutoClaim memory b) { // gets address \r\n        return autoMap[_address];   // returns AutoClaim\r\n    }\r\n\r\n    function createAutoClaim(string memory _firstName) public{\r\n  \r\n        AutoClaim memory insertAC;\r\n        insertAC.firstName = _firstName;\r\n        fileAutoClaim(msg.sender, insertAC);  \r\n    }\r\n    uint storedData;\r\n\r\n    function set(uint x) public {\r\n        storedData = x;\r\n    }\r\n\r\n    function get() public view returns (uint) {\r\n        return storedData;\r\n    }\r\n}\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
+  "sourcePath": "C:/Users/n1554252/OneDrive - Liberty Mutual/Desktop/david-long-fanclub/contracts/SmartClaims.sol",
   "ast": {
-    "absolutePath": "/C/Users/n1554733/TruffleProject/david-long-fanclub/contracts/SmartClaims.sol",
+    "absolutePath": "/C/Users/n1554252/OneDrive - Liberty Mutual/Desktop/david-long-fanclub/contracts/SmartClaims.sol",
     "exportedSymbols": {
       "SmartClaims": [
-        22
+        88
       ]
     },
-    "id": 23,
+    "id": 89,
     "nodeType": "SourceUnit",
     "nodes": [
       {
@@ -61,7 +152,16 @@
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "33:32:0"
+        "src": "0:32:0"
+      },
+      {
+        "id": 2,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "34:33:0"
       },
       {
         "baseContracts": [],
@@ -69,20 +169,787 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 22,
+        "id": 88,
         "linearizedBaseContracts": [
-          22
+          88
         ],
         "name": "SmartClaims",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
+            "canonicalName": "SmartClaims.AutoClaim",
+            "id": 5,
+            "members": [
+              {
+                "constant": false,
+                "id": 4,
+                "name": "firstName",
+                "nodeType": "VariableDeclaration",
+                "scope": 5,
+                "src": "133:16:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 3,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "133:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "AutoClaim",
+            "nodeType": "StructDefinition",
+            "scope": 88,
+            "src": "99:748:0",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "SmartClaims.PersonW",
+            "id": 10,
+            "members": [
+              {
+                "constant": false,
+                "id": 7,
+                "name": "name",
+                "nodeType": "VariableDeclaration",
+                "scope": 10,
+                "src": "891:11:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 6,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "891:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 9,
+                "name": "phoneNum",
+                "nodeType": "VariableDeclaration",
+                "scope": 10,
+                "src": "913:15:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 8,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "913:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "PersonW",
+            "nodeType": "StructDefinition",
+            "scope": 88,
+            "src": "859:77:0",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "SmartClaims.PropertyClaim",
+            "id": 13,
+            "members": [
+              {
+                "constant": false,
+                "id": 12,
+                "name": "firstName",
+                "nodeType": "VariableDeclaration",
+                "scope": 13,
+                "src": "986:16:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 11,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "986:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "PropertyClaim",
+            "nodeType": "StructDefinition",
+            "scope": 88,
+            "src": "948:512:0",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "SmartClaims.HealthClaim",
+            "id": 16,
+            "members": [
+              {
+                "constant": false,
+                "id": 15,
+                "name": "firstName",
+                "nodeType": "VariableDeclaration",
+                "scope": 16,
+                "src": "1507:16:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 14,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1507:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "HealthClaim",
+            "nodeType": "StructDefinition",
+            "scope": 88,
+            "src": "1472:596:0",
+            "visibility": "public"
+          },
+          {
             "constant": false,
-            "id": 3,
+            "id": 20,
+            "name": "autoMap",
+            "nodeType": "VariableDeclaration",
+            "scope": 88,
+            "src": "2300:44:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_AutoClaim_$5_storage_$",
+              "typeString": "mapping(address => struct SmartClaims.AutoClaim)"
+            },
+            "typeName": {
+              "id": 19,
+              "keyType": {
+                "id": 17,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "2308:7:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "2300:29:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_AutoClaim_$5_storage_$",
+                "typeString": "mapping(address => struct SmartClaims.AutoClaim)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 18,
+                "name": "AutoClaim",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 5,
+                "src": "2319:9:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_AutoClaim_$5_storage_ptr",
+                  "typeString": "struct SmartClaims.AutoClaim"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 33,
+              "nodeType": "Block",
+              "src": "2534:108:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 31,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 27,
+                        "name": "autoMap",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 20,
+                        "src": "2565:7:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_struct$_AutoClaim_$5_storage_$",
+                          "typeString": "mapping(address => struct SmartClaims.AutoClaim storage ref)"
+                        }
+                      },
+                      "id": 29,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 28,
+                        "name": "_address",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 22,
+                        "src": "2573:8:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "2565:17:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_AutoClaim_$5_storage",
+                        "typeString": "struct SmartClaims.AutoClaim storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 30,
+                      "name": "_claim",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 24,
+                      "src": "2585:6:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_AutoClaim_$5_memory_ptr",
+                        "typeString": "struct SmartClaims.AutoClaim memory"
+                      }
+                    },
+                    "src": "2565:26:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_AutoClaim_$5_storage",
+                      "typeString": "struct SmartClaims.AutoClaim storage ref"
+                    }
+                  },
+                  "id": 32,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2565:26:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 34,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "fileAutoClaim",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 25,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 22,
+                  "name": "_address",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34,
+                  "src": "2484:16:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 21,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2484:7:0",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 24,
+                  "name": "_claim",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34,
+                  "src": "2502:23:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_AutoClaim_$5_memory_ptr",
+                    "typeString": "struct SmartClaims.AutoClaim"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 23,
+                    "name": "AutoClaim",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 5,
+                    "src": "2502:9:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_AutoClaim_$5_storage_ptr",
+                      "typeString": "struct SmartClaims.AutoClaim"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2483:43:0"
+            },
+            "returnParameters": {
+              "id": 26,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2534:0:0"
+            },
+            "scope": 88,
+            "src": "2461:181:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 45,
+              "nodeType": "Block",
+              "src": "2889:83:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 41,
+                      "name": "autoMap",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 20,
+                      "src": "2924:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_address_$_t_struct$_AutoClaim_$5_storage_$",
+                        "typeString": "mapping(address => struct SmartClaims.AutoClaim storage ref)"
+                      }
+                    },
+                    "id": 43,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 42,
+                      "name": "_address",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 36,
+                      "src": "2932:8:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "2924:17:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_AutoClaim_$5_storage",
+                      "typeString": "struct SmartClaims.AutoClaim storage ref"
+                    }
+                  },
+                  "functionReturnParameters": 40,
+                  "id": 44,
+                  "nodeType": "Return",
+                  "src": "2917:24:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 46,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getAutoClaim",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 37,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 36,
+                  "name": "_address",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 46,
+                  "src": "2830:16:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 35,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2830:7:0",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2829:18:0"
+            },
+            "returnParameters": {
+              "id": 40,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 39,
+                  "name": "b",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 46,
+                  "src": "2869:18:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_AutoClaim_$5_memory_ptr",
+                    "typeString": "struct SmartClaims.AutoClaim"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 38,
+                    "name": "AutoClaim",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 5,
+                    "src": "2869:9:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_AutoClaim_$5_storage_ptr",
+                      "typeString": "struct SmartClaims.AutoClaim"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2868:20:0"
+            },
+            "scope": 88,
+            "src": "2808:164:0",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 66,
+              "nodeType": "Block",
+              "src": "3037:138:0",
+              "statements": [
+                {
+                  "assignments": [
+                    52
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 52,
+                      "name": "insertAC",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 66,
+                      "src": "3052:25:0",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_AutoClaim_$5_memory_ptr",
+                        "typeString": "struct SmartClaims.AutoClaim"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 51,
+                        "name": "AutoClaim",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 5,
+                        "src": "3052:9:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_AutoClaim_$5_storage_ptr",
+                          "typeString": "struct SmartClaims.AutoClaim"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 53,
+                  "initialValue": null,
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "3052:25:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 58,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 54,
+                        "name": "insertAC",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 52,
+                        "src": "3088:8:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_AutoClaim_$5_memory_ptr",
+                          "typeString": "struct SmartClaims.AutoClaim memory"
+                        }
+                      },
+                      "id": 56,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "firstName",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 4,
+                      "src": "3088:18:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_memory",
+                        "typeString": "string memory"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 57,
+                      "name": "_firstName",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 48,
+                      "src": "3109:10:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_memory_ptr",
+                        "typeString": "string memory"
+                      }
+                    },
+                    "src": "3088:31:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_memory",
+                      "typeString": "string memory"
+                    }
+                  },
+                  "id": 59,
+                  "nodeType": "ExpressionStatement",
+                  "src": "3088:31:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 61,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 103,
+                          "src": "3144:3:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 62,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "3144:10:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 63,
+                        "name": "insertAC",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 52,
+                        "src": "3156:8:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_AutoClaim_$5_memory_ptr",
+                          "typeString": "struct SmartClaims.AutoClaim memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        },
+                        {
+                          "typeIdentifier": "t_struct$_AutoClaim_$5_memory_ptr",
+                          "typeString": "struct SmartClaims.AutoClaim memory"
+                        }
+                      ],
+                      "id": 60,
+                      "name": "fileAutoClaim",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 34,
+                      "src": "3130:13:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_struct$_AutoClaim_$5_memory_ptr_$returns$__$",
+                        "typeString": "function (address,struct SmartClaims.AutoClaim memory)"
+                      }
+                    },
+                    "id": 64,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "3130:35:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 65,
+                  "nodeType": "ExpressionStatement",
+                  "src": "3130:35:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 67,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "createAutoClaim",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 49,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 48,
+                  "name": "_firstName",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 67,
+                  "src": "3005:24:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 47,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3005:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3004:26:0"
+            },
+            "returnParameters": {
+              "id": 50,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3037:0:0"
+            },
+            "scope": 88,
+            "src": "2980:195:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 69,
             "name": "storedData",
             "nodeType": "VariableDeclaration",
-            "scope": 22,
-            "src": "97:15:0",
+            "scope": 88,
+            "src": "3181:15:0",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -90,10 +957,10 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 2,
+              "id": 68,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
-              "src": "97:4:0",
+              "src": "3181:4:0",
               "typeDescriptions": {
                 "typeIdentifier": "t_uint256",
                 "typeString": "uint256"
@@ -104,26 +971,26 @@
           },
           {
             "body": {
-              "id": 12,
+              "id": 78,
               "nodeType": "Block",
-              "src": "149:33:0",
+              "src": "3233:33:0",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 10,
+                    "id": 76,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 8,
+                      "id": 74,
                       "name": "storedData",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3,
-                      "src": "160:10:0",
+                      "referencedDeclaration": 69,
+                      "src": "3244:10:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -133,47 +1000,47 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 9,
+                      "id": 75,
                       "name": "x",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 5,
-                      "src": "173:1:0",
+                      "referencedDeclaration": 71,
+                      "src": "3257:1:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
-                    "src": "160:14:0",
+                    "src": "3244:14:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "id": 11,
+                  "id": 77,
                   "nodeType": "ExpressionStatement",
-                  "src": "160:14:0"
+                  "src": "3244:14:0"
                 }
               ]
             },
             "documentation": null,
-            "id": 13,
+            "id": 79,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "set",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 6,
+              "id": 72,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 5,
+                  "id": 71,
                   "name": "x",
                   "nodeType": "VariableDeclaration",
-                  "scope": 13,
-                  "src": "134:6:0",
+                  "scope": 79,
+                  "src": "3218:6:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -181,10 +1048,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 4,
+                    "id": 70,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "134:4:0",
+                    "src": "3218:4:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -194,71 +1061,71 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "133:8:0"
+              "src": "3217:8:0"
             },
             "returnParameters": {
-              "id": 7,
+              "id": 73,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "149:0:0"
+              "src": "3233:0:0"
             },
-            "scope": 22,
-            "src": "121:61:0",
+            "scope": 88,
+            "src": "3205:61:0",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 20,
+              "id": 86,
               "nodeType": "Block",
-              "src": "232:36:0",
+              "src": "3316:36:0",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 18,
+                    "id": 84,
                     "name": "storedData",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 3,
-                    "src": "250:10:0",
+                    "referencedDeclaration": 69,
+                    "src": "3334:10:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 17,
-                  "id": 19,
+                  "functionReturnParameters": 83,
+                  "id": 85,
                   "nodeType": "Return",
-                  "src": "243:17:0"
+                  "src": "3327:17:0"
                 }
               ]
             },
             "documentation": null,
-            "id": 21,
+            "id": 87,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "get",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 14,
+              "id": 80,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "202:2:0"
+              "src": "3286:2:0"
             },
             "returnParameters": {
-              "id": 17,
+              "id": 83,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 16,
+                  "id": 82,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 21,
-                  "src": "226:4:0",
+                  "scope": 87,
+                  "src": "3310:4:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -266,10 +1133,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 15,
+                    "id": 81,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "226:4:0",
+                    "src": "3310:4:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -279,27 +1146,27 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "225:6:0"
+              "src": "3309:6:0"
             },
-            "scope": 22,
-            "src": "190:78:0",
+            "scope": 88,
+            "src": "3274:78:0",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 23,
-        "src": "69:202:0"
+        "scope": 89,
+        "src": "71:3284:0"
       }
     ],
-    "src": "33:240:0"
+    "src": "0:3393:0"
   },
   "legacyAST": {
     "attributes": {
-      "absolutePath": "/C/Users/n1554733/TruffleProject/david-long-fanclub/contracts/SmartClaims.sol",
+      "absolutePath": "/C/Users/n1554252/OneDrive - Liberty Mutual/Desktop/david-long-fanclub/contracts/SmartClaims.sol",
       "exportedSymbols": {
         "SmartClaims": [
-          22
+          88
         ]
       }
     },
@@ -318,7 +1185,18 @@
         },
         "id": 1,
         "name": "PragmaDirective",
-        "src": "33:32:0"
+        "src": "0:32:0"
+      },
+      {
+        "attributes": {
+          "literals": [
+            "experimental",
+            "ABIEncoderV2"
+          ]
+        },
+        "id": 2,
+        "name": "PragmaDirective",
+        "src": "34:33:0"
       },
       {
         "attributes": {
@@ -332,17 +1210,853 @@
           "documentation": null,
           "fullyImplemented": true,
           "linearizedBaseContracts": [
-            22
+            88
           ],
           "name": "SmartClaims",
-          "scope": 23
+          "scope": 89
         },
         "children": [
           {
             "attributes": {
+              "canonicalName": "SmartClaims.AutoClaim",
+              "name": "AutoClaim",
+              "scope": 88,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "firstName",
+                  "scope": 5,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string"
+                    },
+                    "id": 3,
+                    "name": "ElementaryTypeName",
+                    "src": "133:6:0"
+                  }
+                ],
+                "id": 4,
+                "name": "VariableDeclaration",
+                "src": "133:16:0"
+              }
+            ],
+            "id": 5,
+            "name": "StructDefinition",
+            "src": "99:748:0"
+          },
+          {
+            "attributes": {
+              "canonicalName": "SmartClaims.PersonW",
+              "name": "PersonW",
+              "scope": 88,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "name",
+                  "scope": 10,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string"
+                    },
+                    "id": 6,
+                    "name": "ElementaryTypeName",
+                    "src": "891:6:0"
+                  }
+                ],
+                "id": 7,
+                "name": "VariableDeclaration",
+                "src": "891:11:0"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "phoneNum",
+                  "scope": 10,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string"
+                    },
+                    "id": 8,
+                    "name": "ElementaryTypeName",
+                    "src": "913:6:0"
+                  }
+                ],
+                "id": 9,
+                "name": "VariableDeclaration",
+                "src": "913:15:0"
+              }
+            ],
+            "id": 10,
+            "name": "StructDefinition",
+            "src": "859:77:0"
+          },
+          {
+            "attributes": {
+              "canonicalName": "SmartClaims.PropertyClaim",
+              "name": "PropertyClaim",
+              "scope": 88,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "firstName",
+                  "scope": 13,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string"
+                    },
+                    "id": 11,
+                    "name": "ElementaryTypeName",
+                    "src": "986:6:0"
+                  }
+                ],
+                "id": 12,
+                "name": "VariableDeclaration",
+                "src": "986:16:0"
+              }
+            ],
+            "id": 13,
+            "name": "StructDefinition",
+            "src": "948:512:0"
+          },
+          {
+            "attributes": {
+              "canonicalName": "SmartClaims.HealthClaim",
+              "name": "HealthClaim",
+              "scope": 88,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "firstName",
+                  "scope": 16,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string"
+                    },
+                    "id": 14,
+                    "name": "ElementaryTypeName",
+                    "src": "1507:6:0"
+                  }
+                ],
+                "id": 15,
+                "name": "VariableDeclaration",
+                "src": "1507:16:0"
+              }
+            ],
+            "id": 16,
+            "name": "StructDefinition",
+            "src": "1472:596:0"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "autoMap",
+              "scope": 88,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "mapping(address => struct SmartClaims.AutoClaim)",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "type": "mapping(address => struct SmartClaims.AutoClaim)"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "address",
+                      "type": "address"
+                    },
+                    "id": 17,
+                    "name": "ElementaryTypeName",
+                    "src": "2308:7:0"
+                  },
+                  {
+                    "attributes": {
+                      "contractScope": null,
+                      "name": "AutoClaim",
+                      "referencedDeclaration": 5,
+                      "type": "struct SmartClaims.AutoClaim"
+                    },
+                    "id": 18,
+                    "name": "UserDefinedTypeName",
+                    "src": "2319:9:0"
+                  }
+                ],
+                "id": 19,
+                "name": "Mapping",
+                "src": "2300:29:0"
+              }
+            ],
+            "id": 20,
+            "name": "VariableDeclaration",
+            "src": "2300:44:0"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "fileAutoClaim",
+              "scope": 88,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_address",
+                      "scope": 34,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 21,
+                        "name": "ElementaryTypeName",
+                        "src": "2484:7:0"
+                      }
+                    ],
+                    "id": 22,
+                    "name": "VariableDeclaration",
+                    "src": "2484:16:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_claim",
+                      "scope": 34,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "struct SmartClaims.AutoClaim",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "contractScope": null,
+                          "name": "AutoClaim",
+                          "referencedDeclaration": 5,
+                          "type": "struct SmartClaims.AutoClaim"
+                        },
+                        "id": 23,
+                        "name": "UserDefinedTypeName",
+                        "src": "2502:9:0"
+                      }
+                    ],
+                    "id": 24,
+                    "name": "VariableDeclaration",
+                    "src": "2502:23:0"
+                  }
+                ],
+                "id": 25,
+                "name": "ParameterList",
+                "src": "2483:43:0"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 26,
+                "name": "ParameterList",
+                "src": "2534:0:0"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "struct SmartClaims.AutoClaim storage ref"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "type": "struct SmartClaims.AutoClaim storage ref"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 20,
+                                  "type": "mapping(address => struct SmartClaims.AutoClaim storage ref)",
+                                  "value": "autoMap"
+                                },
+                                "id": 27,
+                                "name": "Identifier",
+                                "src": "2565:7:0"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 22,
+                                  "type": "address",
+                                  "value": "_address"
+                                },
+                                "id": 28,
+                                "name": "Identifier",
+                                "src": "2573:8:0"
+                              }
+                            ],
+                            "id": 29,
+                            "name": "IndexAccess",
+                            "src": "2565:17:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 24,
+                              "type": "struct SmartClaims.AutoClaim memory",
+                              "value": "_claim"
+                            },
+                            "id": 30,
+                            "name": "Identifier",
+                            "src": "2585:6:0"
+                          }
+                        ],
+                        "id": 31,
+                        "name": "Assignment",
+                        "src": "2565:26:0"
+                      }
+                    ],
+                    "id": 32,
+                    "name": "ExpressionStatement",
+                    "src": "2565:26:0"
+                  }
+                ],
+                "id": 33,
+                "name": "Block",
+                "src": "2534:108:0"
+              }
+            ],
+            "id": 34,
+            "name": "FunctionDefinition",
+            "src": "2461:181:0"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getAutoClaim",
+              "scope": 88,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_address",
+                      "scope": 46,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 35,
+                        "name": "ElementaryTypeName",
+                        "src": "2830:7:0"
+                      }
+                    ],
+                    "id": 36,
+                    "name": "VariableDeclaration",
+                    "src": "2830:16:0"
+                  }
+                ],
+                "id": 37,
+                "name": "ParameterList",
+                "src": "2829:18:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "b",
+                      "scope": 46,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "struct SmartClaims.AutoClaim",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "contractScope": null,
+                          "name": "AutoClaim",
+                          "referencedDeclaration": 5,
+                          "type": "struct SmartClaims.AutoClaim"
+                        },
+                        "id": 38,
+                        "name": "UserDefinedTypeName",
+                        "src": "2869:9:0"
+                      }
+                    ],
+                    "id": 39,
+                    "name": "VariableDeclaration",
+                    "src": "2869:18:0"
+                  }
+                ],
+                "id": 40,
+                "name": "ParameterList",
+                "src": "2868:20:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 40
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "type": "struct SmartClaims.AutoClaim storage ref"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 20,
+                              "type": "mapping(address => struct SmartClaims.AutoClaim storage ref)",
+                              "value": "autoMap"
+                            },
+                            "id": 41,
+                            "name": "Identifier",
+                            "src": "2924:7:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 36,
+                              "type": "address",
+                              "value": "_address"
+                            },
+                            "id": 42,
+                            "name": "Identifier",
+                            "src": "2932:8:0"
+                          }
+                        ],
+                        "id": 43,
+                        "name": "IndexAccess",
+                        "src": "2924:17:0"
+                      }
+                    ],
+                    "id": 44,
+                    "name": "Return",
+                    "src": "2917:24:0"
+                  }
+                ],
+                "id": 45,
+                "name": "Block",
+                "src": "2889:83:0"
+              }
+            ],
+            "id": 46,
+            "name": "FunctionDefinition",
+            "src": "2808:164:0"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "createAutoClaim",
+              "scope": 88,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_firstName",
+                      "scope": 67,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 47,
+                        "name": "ElementaryTypeName",
+                        "src": "3005:6:0"
+                      }
+                    ],
+                    "id": 48,
+                    "name": "VariableDeclaration",
+                    "src": "3005:24:0"
+                  }
+                ],
+                "id": 49,
+                "name": "ParameterList",
+                "src": "3004:26:0"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 50,
+                "name": "ParameterList",
+                "src": "3037:0:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "assignments": [
+                        52
+                      ],
+                      "initialValue": null
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "name": "insertAC",
+                          "scope": 66,
+                          "stateVariable": false,
+                          "storageLocation": "memory",
+                          "type": "struct SmartClaims.AutoClaim",
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "contractScope": null,
+                              "name": "AutoClaim",
+                              "referencedDeclaration": 5,
+                              "type": "struct SmartClaims.AutoClaim"
+                            },
+                            "id": 51,
+                            "name": "UserDefinedTypeName",
+                            "src": "3052:9:0"
+                          }
+                        ],
+                        "id": 52,
+                        "name": "VariableDeclaration",
+                        "src": "3052:25:0"
+                      }
+                    ],
+                    "id": 53,
+                    "name": "VariableDeclarationStatement",
+                    "src": "3052:25:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "string memory"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "firstName",
+                              "referencedDeclaration": 4,
+                              "type": "string memory"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 52,
+                                  "type": "struct SmartClaims.AutoClaim memory",
+                                  "value": "insertAC"
+                                },
+                                "id": 54,
+                                "name": "Identifier",
+                                "src": "3088:8:0"
+                              }
+                            ],
+                            "id": 56,
+                            "name": "MemberAccess",
+                            "src": "3088:18:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 48,
+                              "type": "string memory",
+                              "value": "_firstName"
+                            },
+                            "id": 57,
+                            "name": "Identifier",
+                            "src": "3109:10:0"
+                          }
+                        ],
+                        "id": 58,
+                        "name": "Assignment",
+                        "src": "3088:31:0"
+                      }
+                    ],
+                    "id": 59,
+                    "name": "ExpressionStatement",
+                    "src": "3088:31:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_address_payable",
+                                  "typeString": "address payable"
+                                },
+                                {
+                                  "typeIdentifier": "t_struct$_AutoClaim_$5_memory_ptr",
+                                  "typeString": "struct SmartClaims.AutoClaim memory"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 34,
+                              "type": "function (address,struct SmartClaims.AutoClaim memory)",
+                              "value": "fileAutoClaim"
+                            },
+                            "id": 60,
+                            "name": "Identifier",
+                            "src": "3130:13:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "sender",
+                              "referencedDeclaration": null,
+                              "type": "address payable"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 103,
+                                  "type": "msg",
+                                  "value": "msg"
+                                },
+                                "id": 61,
+                                "name": "Identifier",
+                                "src": "3144:3:0"
+                              }
+                            ],
+                            "id": 62,
+                            "name": "MemberAccess",
+                            "src": "3144:10:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 52,
+                              "type": "struct SmartClaims.AutoClaim memory",
+                              "value": "insertAC"
+                            },
+                            "id": 63,
+                            "name": "Identifier",
+                            "src": "3156:8:0"
+                          }
+                        ],
+                        "id": 64,
+                        "name": "FunctionCall",
+                        "src": "3130:35:0"
+                      }
+                    ],
+                    "id": 65,
+                    "name": "ExpressionStatement",
+                    "src": "3130:35:0"
+                  }
+                ],
+                "id": 66,
+                "name": "Block",
+                "src": "3037:138:0"
+              }
+            ],
+            "id": 67,
+            "name": "FunctionDefinition",
+            "src": "2980:195:0"
+          },
+          {
+            "attributes": {
               "constant": false,
               "name": "storedData",
-              "scope": 22,
+              "scope": 88,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "uint256",
@@ -355,14 +2069,14 @@
                   "name": "uint",
                   "type": "uint256"
                 },
-                "id": 2,
+                "id": 68,
                 "name": "ElementaryTypeName",
-                "src": "97:4:0"
+                "src": "3181:4:0"
               }
             ],
-            "id": 3,
+            "id": 69,
             "name": "VariableDeclaration",
-            "src": "97:15:0"
+            "src": "3181:15:0"
           },
           {
             "attributes": {
@@ -374,7 +2088,7 @@
                 null
               ],
               "name": "set",
-              "scope": 22,
+              "scope": 88,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "public"
@@ -386,7 +2100,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "x",
-                      "scope": 13,
+                      "scope": 79,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -399,19 +2113,19 @@
                           "name": "uint",
                           "type": "uint256"
                         },
-                        "id": 4,
+                        "id": 70,
                         "name": "ElementaryTypeName",
-                        "src": "134:4:0"
+                        "src": "3218:4:0"
                       }
                     ],
-                    "id": 5,
+                    "id": 71,
                     "name": "VariableDeclaration",
-                    "src": "134:6:0"
+                    "src": "3218:6:0"
                   }
                 ],
-                "id": 6,
+                "id": 72,
                 "name": "ParameterList",
-                "src": "133:8:0"
+                "src": "3217:8:0"
               },
               {
                 "attributes": {
@@ -420,9 +2134,9 @@
                   ]
                 },
                 "children": [],
-                "id": 7,
+                "id": 73,
                 "name": "ParameterList",
-                "src": "149:0:0"
+                "src": "3233:0:0"
               },
               {
                 "children": [
@@ -445,13 +2159,13 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 3,
+                              "referencedDeclaration": 69,
                               "type": "uint256",
                               "value": "storedData"
                             },
-                            "id": 8,
+                            "id": 74,
                             "name": "Identifier",
-                            "src": "160:10:0"
+                            "src": "3244:10:0"
                           },
                           {
                             "attributes": {
@@ -459,33 +2173,33 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 5,
+                              "referencedDeclaration": 71,
                               "type": "uint256",
                               "value": "x"
                             },
-                            "id": 9,
+                            "id": 75,
                             "name": "Identifier",
-                            "src": "173:1:0"
+                            "src": "3257:1:0"
                           }
                         ],
-                        "id": 10,
+                        "id": 76,
                         "name": "Assignment",
-                        "src": "160:14:0"
+                        "src": "3244:14:0"
                       }
                     ],
-                    "id": 11,
+                    "id": 77,
                     "name": "ExpressionStatement",
-                    "src": "160:14:0"
+                    "src": "3244:14:0"
                   }
                 ],
-                "id": 12,
+                "id": 78,
                 "name": "Block",
-                "src": "149:33:0"
+                "src": "3233:33:0"
               }
             ],
-            "id": 13,
+            "id": 79,
             "name": "FunctionDefinition",
-            "src": "121:61:0"
+            "src": "3205:61:0"
           },
           {
             "attributes": {
@@ -497,7 +2211,7 @@
                 null
               ],
               "name": "get",
-              "scope": 22,
+              "scope": 88,
               "stateMutability": "view",
               "superFunction": null,
               "visibility": "public"
@@ -510,9 +2224,9 @@
                   ]
                 },
                 "children": [],
-                "id": 14,
+                "id": 80,
                 "name": "ParameterList",
-                "src": "202:2:0"
+                "src": "3286:2:0"
               },
               {
                 "children": [
@@ -520,7 +2234,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "",
-                      "scope": 21,
+                      "scope": 87,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -533,25 +2247,25 @@
                           "name": "uint",
                           "type": "uint256"
                         },
-                        "id": 15,
+                        "id": 81,
                         "name": "ElementaryTypeName",
-                        "src": "226:4:0"
+                        "src": "3310:4:0"
                       }
                     ],
-                    "id": 16,
+                    "id": 82,
                     "name": "VariableDeclaration",
-                    "src": "226:4:0"
+                    "src": "3310:4:0"
                   }
                 ],
-                "id": 17,
+                "id": 83,
                 "name": "ParameterList",
-                "src": "225:6:0"
+                "src": "3309:6:0"
               },
               {
                 "children": [
                   {
                     "attributes": {
-                      "functionReturnParameters": 17
+                      "functionReturnParameters": 83
                     },
                     "children": [
                       {
@@ -560,38 +2274,38 @@
                           "overloadedDeclarations": [
                             null
                           ],
-                          "referencedDeclaration": 3,
+                          "referencedDeclaration": 69,
                           "type": "uint256",
                           "value": "storedData"
                         },
-                        "id": 18,
+                        "id": 84,
                         "name": "Identifier",
-                        "src": "250:10:0"
+                        "src": "3334:10:0"
                       }
                     ],
-                    "id": 19,
+                    "id": 85,
                     "name": "Return",
-                    "src": "243:17:0"
+                    "src": "3327:17:0"
                   }
                 ],
-                "id": 20,
+                "id": 86,
                 "name": "Block",
-                "src": "232:36:0"
+                "src": "3316:36:0"
               }
             ],
-            "id": 21,
+            "id": 87,
             "name": "FunctionDefinition",
-            "src": "190:78:0"
+            "src": "3274:78:0"
           }
         ],
-        "id": 22,
+        "id": 88,
         "name": "ContractDefinition",
-        "src": "69:202:0"
+        "src": "71:3284:0"
       }
     ],
-    "id": 23,
+    "id": 89,
     "name": "SourceUnit",
-    "src": "33:240:0"
+    "src": "0:3393:0"
   },
   "compiler": {
     "name": "solc",
@@ -601,13 +2315,12 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x3b5CEBCb0b31e60D1B967F4F37612b2b4c927E6f",
-      "transactionHash": "0x577390dec03c7f1b11f9479e6105532fcf009e28ccbe8685479b17f78bec35b7"
+      "address": "0x8E741b23f5049db931dDA518dbda1c6586c09BC7",
+      "transactionHash": "0xa6eba9f18aaac580b0b5dc64cfda809a1ab138e927ebe0ade2db992e1fb62e0d"
     }
   },
   "schemaVersion": "3.4.1",
-  "updatedAt": "2021-07-14T18:57:34.104Z",
-  "networkType": "ethereum",
+  "updatedAt": "2021-07-14T22:29:26.713Z",
   "devdoc": {
     "methods": {}
   },
