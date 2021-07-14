@@ -9,7 +9,7 @@ export default function Registration() {
     const handleItemClick = (value) => {
         setActiveItem(value); 
     }
-
+    
     const pnc = (
         <PNC 
         handleItemClick={handleItemClick}

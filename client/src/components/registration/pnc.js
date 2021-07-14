@@ -1,9 +1,13 @@
-import React from "react";
-import { Header, Message, Menu } from "semantic-ui-react";
+import React, { useState } from "react";
+import { Header, Message, Menu, Accordion, Icon } from "semantic-ui-react";
 
 
 export default function PNC({ handleItemClick, value }) {
+    const [activeIndex, setActiveIndex] = useState(0)
+
     return (
+        
+        // Header with all the different types of insurance claims
         <>
             <Header style={{fontSize: 50}} as='h1'>SmartClaims</Header>
             <Header style={{marginTop: -20}} as='h3'>A new way of insurance.</Header>
@@ -24,7 +28,6 @@ export default function PNC({ handleItemClick, value }) {
                 onClick={() => {handleItemClick(value = "Health")}}
                 />
             </Menu>
-            <h1>PNC</h1>
         </>
     )
 }
