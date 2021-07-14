@@ -49,8 +49,36 @@ export default function Auto({ handleItemClick, value }) {
                     <input placeholder='First Name' />
                 </Form.Field>
                 <Form.Field>
-                    <label>Last Name</label>
+                    <label>Gender</label>
                     <input placeholder='Last Name' />
+                </Form.Field>
+                <Form.Field>
+                    <label>Date of Birth</label>
+                    <input placeholder='Date of Birth' />
+                </Form.Field>
+                <Form.Field>
+                    <label>License Number</label>
+                    <input placeholder='License Number' />
+                </Form.Field>
+                <Form.Field>
+                    <label>Phone Number</label>
+                    <input placeholder='Phone Number' />
+                </Form.Field>
+                <Form.Field>
+                    <label>Policy Number</label>
+                    <input placeholder='Policy Number' />
+                </Form.Field>
+                <Form.Field>
+                    <label>City</label>
+                    <input placeholder='City' />
+                </Form.Field>
+                <Form.Field>
+                    <label>State</label>
+                    <input placeholder='State' />
+                </Form.Field>
+                <Form.Field>
+                    <label>ZipCode</label>
+                    <input placeholder='Zipcode' />
                 </Form.Field>
             </Form>
             </Accordion.Content>
@@ -67,13 +95,25 @@ export default function Auto({ handleItemClick, value }) {
             {/* SECOND CONTENT ------- */}
             <Form>
                 <Form.Field>
-                        <label>First Name</label>
-                        <input placeholder='First Name' />
+                        <label>Make</label>
+                        <input placeholder='Make' />
                 </Form.Field>
                 <Form.Field>
-                        <label>Last Name</label>
-                        <input placeholder='Last Name' />
-                </Form.Field>                
+                        <label>Model</label>
+                        <input placeholder='Model' />
+                </Form.Field>
+                <Form.Field>
+                        <label>Year</label>
+                        <input placeholder='Year' />
+                </Form.Field> 
+                <Form.Field>
+                        <label>Color</label>
+                        <input placeholder='Color' />
+                </Form.Field> 
+                <Form.Field>
+                        <label>License Plate Number</label>
+                        <input placeholder='Plate Number' />
+                </Form.Field>                 
             </Form>
             </Accordion.Content>
 
@@ -89,12 +129,36 @@ export default function Auto({ handleItemClick, value }) {
             {/* THIRD CONTENT ------- */}
             <Form>
                 <Form.Field>
-                        <label>First Name</label>
-                        <input placeholder='First Name' />
+                        <label>Date of Accident</label>
+                        <input placeholder='Date' />
                 </Form.Field>
                 <Form.Field>
-                        <label>Last Name</label>
-                        <input placeholder='Last Name' />
+                        <label>Time of Accident</label>
+                        <input placeholder='Time' />
+                </Form.Field>
+                <Form.Field>
+                        <label>Location</label>
+                        <input placeholder='Location' />
+                </Form.Field>
+                <Form.Field>
+                        <label>Driver Name</label>
+                        <input placeholder='Driver Name' />
+                </Form.Field>
+                <Form.Field>
+                        <label>Was the vehicle towed?</label>
+                        <input placeholder='Vehicles Towed' />
+                </Form.Field>
+                <Form.Field>
+                        <label>How many passengers were in the car, if any?</label>
+                        <input placeholder='Number of Passengers' />
+                </Form.Field>
+                <Form.Field>
+                        <label>How many cars were involved?</label>
+                        <input placeholder='Number of Cars' />
+                </Form.Field>
+                <Form.Field>
+                        <label>Where on the car is there damage?</label>
+                        <input placeholder='Car Damage' />
                 </Form.Field>             
             </Form>
             </Accordion.Content>
@@ -117,6 +181,22 @@ export default function Auto({ handleItemClick, value }) {
                 <Form.Field>
                         <label>Last Name</label>
                         <input placeholder='Last Name' />
+                </Form.Field>
+                <Form.Field>
+                        <label>Phone Number</label>
+                        <input placeholder='Phone Number' />
+                </Form.Field>
+                <Form.Field>
+                        <label>Vehicle Make</label>
+                        <input placeholder='Make' />
+                </Form.Field>
+                <Form.Field>
+                        <label>Vehicle Model</label>
+                        <input placeholder='Model' />
+                </Form.Field>
+                <Form.Field>
+                        <label>Vehicle Year</label>
+                        <input placeholder='Year' />
                 </Form.Field>             
             </Form>
             </Accordion.Content>
@@ -133,13 +213,9 @@ export default function Auto({ handleItemClick, value }) {
             {/* FIFTH CONTENT ------- */}
             <Form>
                 <Form.Field>
-                        <label>First Name</label>
-                        <input placeholder='First Name' />
-                </Form.Field>
-                <Form.Field>
-                        <label>Last Name</label>
-                        <input placeholder='Last Name' />
-                </Form.Field>             
+                        <label>Explanation</label>
+                        <input placeholder='Explain the incident...' />
+                </Form.Field>           
             </Form>
             </Accordion.Content>
         </Accordion>
