@@ -16,14 +16,17 @@ export default function Health({ handleItemClick, value }) {
             </Message>
             <Menu color={"black"} widths={3}>
                 <Menu.Item
+				style={{ fontSize: 17 }}
                 name='Property and Casualty'
                 onClick={() => {handleItemClick(value = "Property and Casualty")}}
                 />
                 <Menu.Item
+				style={{ fontSize: 17 }}
                 name='Auto'
                 onClick={() => {handleItemClick(value = "Auto")}}
                 />
                 <Menu.Item
+				style={{ fontSize: 17 }}
 				header
                 name='Health'
                 onClick={() => {handleItemClick(value = "Health")}}
