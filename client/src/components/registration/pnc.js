@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Header, Message, Menu, Accordion, Icon, Form, Button, Container, Checkbox } from "semantic-ui-react";
 
 
-export default function PNC({ handleItemClick, value }) {
+export default function PNC({ handleItemClick, value, account, contract, web3 }) {
     const [activeIndex, setActiveIndex] = useState();
     var index;
 
