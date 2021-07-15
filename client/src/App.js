@@ -77,7 +77,7 @@ function App() {
     <div className="App">
       <HeaderSection />
       <Registration />
-      <h1>Good to Go!</h1>
+      {/* <h1>Good to Go!</h1>
       <p>Your Truffle Box is installed and ready.</p>
       <h2>Smart Contract Example</h2>
       <p>
@@ -87,7 +87,7 @@ function App() {
       <p>
         Try changing the value stored on <strong>line 42</strong> of App.js.
       </p>
-      {/* <div>The stored value is: {this.state.storageValue}</div> */}
+      <div>The stored value is: {this.state.storageValue}</div> */}
     </div>
         );
 }

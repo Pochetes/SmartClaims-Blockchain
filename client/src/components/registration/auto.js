@@ -20,6 +20,7 @@ export default function Auto({ handleItemClick, value }) {
             onClick={() => {handleItemClick(value = `Property and Casualty`)}}
             />
             <Menu.Item
+			header
             name='Auto'
             onClick={() => {handleItemClick(value = "Auto")}}
             />
@@ -34,7 +35,8 @@ export default function Auto({ handleItemClick, value }) {
         <Container style={{
 			display: "flex",
 			justifyContent: "center",
-			alignItems: "center"
+			alignItems: "center",
+			marginTop: 50
 		}}>
 			<Accordion styled>
 			{/* FIRST SECTION ------- */}

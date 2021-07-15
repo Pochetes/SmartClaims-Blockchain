@@ -24,6 +24,7 @@ export default function Health({ handleItemClick, value }) {
                 onClick={() => {handleItemClick(value = "Auto")}}
                 />
                 <Menu.Item
+				header
                 name='Health'
                 onClick={() => {handleItemClick(value = "Health")}}
                 />
@@ -35,7 +36,8 @@ export default function Health({ handleItemClick, value }) {
         <Container style={{
 			display: "flex",
 			justifyContent: "center",
-			alignItems: "center"
+			alignItems: "center",
+			marginTop: 50
 		}}>
 			<Accordion styled>
 			{/* FIRST SECTION ------- */}

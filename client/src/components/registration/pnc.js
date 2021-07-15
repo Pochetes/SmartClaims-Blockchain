@@ -17,6 +17,7 @@ export default function PNC({ handleItemClick, value }) {
             </Message>
             <Menu color={"black"} widths={3}>
                 <Menu.Item
+                header
                 name='Property and Casualty'
                 onClick={() => {handleItemClick(value = "Property and Casualty")}}
                 />
@@ -35,7 +36,8 @@ export default function PNC({ handleItemClick, value }) {
             <Container style={{
                 display: "flex",
                 justifyContent: "center",
-                alignItems: "center"
+                alignItems: "center",
+                marginTop: 50
             }}>
                 <Accordion styled>
                 {/* FIRST SECTION ------- */}
