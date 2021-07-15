@@ -3,6 +3,97 @@
   "abi": [
     {
       "constant": true,
+<<<<<<< HEAD
+=======
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "addresses",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "claims",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "firstName",
+          "type": "string"
+        },
+        {
+          "internalType": "address",
+          "name": "add",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_address",
+          "type": "address"
+        },
+        {
+          "internalType": "string",
+          "name": "_firstName",
+          "type": "string"
+        }
+      ],
+      "name": "fileClaim",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_address",
+          "type": "address"
+        }
+      ],
+      "name": "getClaim",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+>>>>>>> 5ac994d55f16104b64a9890f950cae100d5e1fc5
       "inputs": [
         {
           "internalType": "uint256",
@@ -90,6 +181,7 @@
       "type": "function"
     }
   ],
+<<<<<<< HEAD
   "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"addresses\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"claims\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"firstName\",\"type\":\"string\"},{\"internalType\":\"address\",\"name\":\"add\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"_address\",\"type\":\"address\"},{\"internalType\":\"string\",\"name\":\"_firstName\",\"type\":\"string\"}],\"name\":\"fileClaim\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"_address\",\"type\":\"address\"}],\"name\":\"getClaim\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Users/n1554751/OneDrive - Liberty Mutual/Documents/truffleProject/david-long-fanclub/contracts/SimpleStorage.sol\":\"SimpleStorage\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/n1554751/OneDrive - Liberty Mutual/Documents/truffleProject/david-long-fanclub/contracts/SimpleStorage.sol\":{\"keccak256\":\"0x5917d46daae3c0989d393403b99524cd4d4d597cf86861748dc3fe68ce2662fd\",\"urls\":[\"bzz-raw://fda125382d5ee4d51036f9208e36b9d2941470f6b866724f7f60f80c15583362\",\"dweb:/ipfs/QmRvfgUrHJDy8b9zSGRDMrTnEdPPNmGP3Neuax7wjNkp83\"]}},\"version\":1}",
   "bytecode": "0x608060405234801561001057600080fd5b50610756806100206000396000f3fe608060405234801561001057600080fd5b506004361061004c5760003560e01c80634cd3723a14610051578063b98d8d421461010e578063c6788bdd146101e9578063edf26d9b146102d9575b600080fd5b6100936004803603602081101561006757600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610347565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156100d35780820151818401526020810190506100b8565b50505050905090810190601f1680156101005780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b6101e76004803603604081101561012457600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291908035906020019064010000000081111561016157600080fd5b82018360208201111561017357600080fd5b8035906020019184600183028401116401000000008311171561019557600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f82011690508083019250505050505050919291929050505061042a565b005b61022b600480360360208110156101ff57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610564565b60405180806020018373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001828103825284818151815260200191508051906020019080838360005b8381101561029d578082015181840152602081019050610282565b50505050905090810190601f1680156102ca5780820380516001836020036101000a031916815260200191505b50935050505060405180910390f35b610305600480360360208110156102ef57600080fd5b8101908080359060200190929190505050610640565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b60606000808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000018054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561041e5780601f106103f35761010080835404028352916020019161041e565b820191906000526020600020905b81548152906001019060200180831161040157829003601f168201915b50505050509050919050565b60018290806001815401808255809150509060018203906000526020600020016000909192909190916101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505060405180604001604052808281526020018373ffffffffffffffffffffffffffffffffffffffff168152506000808473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600082015181600001908051906020019061051592919061067c565b5060208201518160010160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055509050505050565b6000602052806000526040600020600091509050806000018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156106105780601f106105e557610100808354040283529160200191610610565b820191906000526020600020905b8154815290600101906020018083116105f357829003601f168201915b5050505050908060010160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905082565b6001818154811061064d57fe5b906000526020600020016000915054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106106bd57805160ff19168380011785556106eb565b828001600101855582156106eb579182015b828111156106ea5782518255916020019190600101906106cf565b5b5090506106f891906106fc565b5090565b61071e91905b8082111561071a576000816000905550600101610702565b5090565b9056fea265627a7a7231582040f11ec6164d0bc5cf743530408eda619e74c6e597a7ae19e5b4d4c6b55b2f6764736f6c63430005100032",
   "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061004c5760003560e01c80634cd3723a14610051578063b98d8d421461010e578063c6788bdd146101e9578063edf26d9b146102d9575b600080fd5b6100936004803603602081101561006757600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610347565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156100d35780820151818401526020810190506100b8565b50505050905090810190601f1680156101005780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b6101e76004803603604081101561012457600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291908035906020019064010000000081111561016157600080fd5b82018360208201111561017357600080fd5b8035906020019184600183028401116401000000008311171561019557600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f82011690508083019250505050505050919291929050505061042a565b005b61022b600480360360208110156101ff57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610564565b60405180806020018373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001828103825284818151815260200191508051906020019080838360005b8381101561029d578082015181840152602081019050610282565b50505050905090810190601f1680156102ca5780820380516001836020036101000a031916815260200191505b50935050505060405180910390f35b610305600480360360208110156102ef57600080fd5b8101908080359060200190929190505050610640565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b60606000808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000018054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561041e5780601f106103f35761010080835404028352916020019161041e565b820191906000526020600020905b81548152906001019060200180831161040157829003601f168201915b50505050509050919050565b60018290806001815401808255809150509060018203906000526020600020016000909192909190916101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505060405180604001604052808281526020018373ffffffffffffffffffffffffffffffffffffffff168152506000808473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600082015181600001908051906020019061051592919061067c565b5060208201518160010160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055509050505050565b6000602052806000526040600020600091509050806000018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156106105780601f106105e557610100808354040283529160200191610610565b820191906000526020600020905b8154815290600101906020018083116105f357829003601f168201915b5050505050908060010160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905082565b6001818154811061064d57fe5b906000526020600020016000915054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106106bd57805160ff19168380011785556106eb565b828001600101855582156106eb579182015b828111156106ea5782518255916020019190600101906106cf565b5b5090506106f891906106fc565b5090565b61071e91905b8082111561071a576000816000905550600101610702565b5090565b9056fea265627a7a7231582040f11ec6164d0bc5cf743530408eda619e74c6e597a7ae19e5b4d4c6b55b2f6764736f6c63430005100032",
@@ -97,14 +189,30 @@
   "deployedSourceMap": "66:650:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;66:650:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;421:118;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;421:118:0;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;421:118:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;250:165;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;250:165:0;;;;;;;;;;;;;;;;;;;;;21:11:-1;8;5:28;2:2;;;46:1;43;36:12;2:2;250:165:0;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;250:165:0;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;250:165:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;93:3;85:6;81:16;74:27;137:4;133:9;126:4;121:3;117:14;113:30;106:37;;169:3;161:6;157:16;147:26;;250:165:0;;;;;;;;;;;;;;;:::i;:::-;;172:43;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;172:43:0;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;172:43:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;219:26;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;219:26:0;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;421:118;478:13;508:6;:16;515:8;508:16;;;;;;;;;;;;;;;:26;;501:33;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;421:118;;;:::o;250:165::-;328:9;343:8;328:24;;39:1:-1;33:3;27:10;23:18;57:10;52:3;45:23;79:10;72:17;;0:93;328:24:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;379:31;;;;;;;;389:10;379:31;;;;401:8;379:31;;;;;360:6;:16;367:8;360:16;;;;;;;;;;;;;;;:50;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;250:165;;:::o;172:43::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;219:26::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;66:650::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
   "source": "// SPDX-License-Identifier: MIT\npragma solidity >=0.4.21 <0.7.0;\n\ncontract SimpleStorage {\n    struct AutoClaim {\n        string firstName;\n        address add;\n    }\n  \n  mapping(address => AutoClaim) public claims;\n  address[] public addresses;\n\n  function fileClaim(address _address, string memory _firstName) public {\n      addresses.push(_address);\n      claims[_address] = AutoClaim(_firstName, _address);\n  }\n  \n  function getClaim(address _address) public view returns (string memory) {\n      return claims[_address].firstName;\n  }\n\n\n\n\n  // uint storedData;\n\n  // function set(uint x) public {\n  //   storedData = x;\n  // }\n\n  // function get() public view returns (uint) {\n  //   return storedData;\n  // }\n}\n",
   "sourcePath": "C:/Users/n1554751/OneDrive - Liberty Mutual/Documents/truffleProject/david-long-fanclub/contracts/SimpleStorage.sol",
+=======
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"addresses\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"claims\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"firstName\",\"type\":\"string\"},{\"internalType\":\"address\",\"name\":\"add\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"_address\",\"type\":\"address\"},{\"internalType\":\"string\",\"name\":\"_firstName\",\"type\":\"string\"}],\"name\":\"fileClaim\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"get\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"_address\",\"type\":\"address\"}],\"name\":\"getClaim\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"x\",\"type\":\"uint256\"}],\"name\":\"set\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Users/n1555085/OneDrive - Liberty Mutual/Desktop/hackathonproject/david-long-fanclub/contracts/SimpleStorage.sol\":\"SimpleStorage\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/n1555085/OneDrive - Liberty Mutual/Desktop/hackathonproject/david-long-fanclub/contracts/SimpleStorage.sol\":{\"keccak256\":\"0x5c81789303d3f7f2c37b3e9718a3aae95c9e5d769c7251572c6593635d95f756\",\"urls\":[\"bzz-raw://7ba5ef6a605a913e30a7bde527dbfc542d48c21882613fc08968ca775db8cca7\",\"dweb:/ipfs/QmTiSQAKsDWmW2fs2ATHQrNt26XcuVyXcspZoozNJMCpre\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506107cc806100206000396000f3fe608060405234801561001057600080fd5b50600436106100625760003560e01c80634cd3723a1461006757806360fe47b1146101245780636d4ce63c14610152578063b98d8d4214610170578063c6788bdd1461024b578063edf26d9b1461033b575b600080fd5b6100a96004803603602081101561007d57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506103a9565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156100e95780820151818401526020810190506100ce565b50505050905090810190601f1680156101165780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b6101506004803603602081101561013a57600080fd5b810190808035906020019092919050505061048c565b005b61015a610496565b6040518082815260200191505060405180910390f35b6102496004803603604081101561018657600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803590602001906401000000008111156101c357600080fd5b8201836020820111156101d557600080fd5b803590602001918460018302840111640100000000831117156101f757600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f8201169050808301925050505050505091929192905050506104a0565b005b61028d6004803603602081101561026157600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506105da565b60405180806020018373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001828103825284818151815260200191508051906020019080838360005b838110156102ff5780820151818401526020810190506102e4565b50505050905090810190601f16801561032c5780820380516001836020036101000a031916815260200191505b50935050505060405180910390f35b6103676004803603602081101561035157600080fd5b81019080803590602001909291905050506106b6565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b60606000808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156104805780601f1061045557610100808354040283529160200191610480565b820191906000526020600020905b81548152906001019060200180831161046357829003601f168201915b50505050509050919050565b8060028190555050565b6000600254905090565b60018290806001815401808255809150509060018203906000526020600020016000909192909190916101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505060405180604001604052808281526020018373ffffffffffffffffffffffffffffffffffffffff168152506000808473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600082015181600001908051906020019061058b9291906106f2565b5060208201518160010160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055509050505050565b6000602052806000526040600020600091509050806000018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156106865780601f1061065b57610100808354040283529160200191610686565b820191906000526020600020905b81548152906001019060200180831161066957829003601f168201915b5050505050908060010160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905082565b600181815481106106c357fe5b906000526020600020016000915054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061073357805160ff1916838001178555610761565b82800160010185558215610761579182015b82811115610760578251825591602001919060010190610745565b5b50905061076e9190610772565b5090565b61079491905b80821115610790576000816000905550600101610778565b5090565b9056fea265627a7a723158201593efb8d99968f88a24b8bd15cb9e099ca613a209f7a9224631072fef3e897564736f6c63430005100032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100625760003560e01c80634cd3723a1461006757806360fe47b1146101245780636d4ce63c14610152578063b98d8d4214610170578063c6788bdd1461024b578063edf26d9b1461033b575b600080fd5b6100a96004803603602081101561007d57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506103a9565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156100e95780820151818401526020810190506100ce565b50505050905090810190601f1680156101165780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b6101506004803603602081101561013a57600080fd5b810190808035906020019092919050505061048c565b005b61015a610496565b6040518082815260200191505060405180910390f35b6102496004803603604081101561018657600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803590602001906401000000008111156101c357600080fd5b8201836020820111156101d557600080fd5b803590602001918460018302840111640100000000831117156101f757600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f8201169050808301925050505050505091929192905050506104a0565b005b61028d6004803603602081101561026157600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506105da565b60405180806020018373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001828103825284818151815260200191508051906020019080838360005b838110156102ff5780820151818401526020810190506102e4565b50505050905090810190601f16801561032c5780820380516001836020036101000a031916815260200191505b50935050505060405180910390f35b6103676004803603602081101561035157600080fd5b81019080803590602001909291905050506106b6565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b60606000808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156104805780601f1061045557610100808354040283529160200191610480565b820191906000526020600020905b81548152906001019060200180831161046357829003601f168201915b50505050509050919050565b8060028190555050565b6000600254905090565b60018290806001815401808255809150509060018203906000526020600020016000909192909190916101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505060405180604001604052808281526020018373ffffffffffffffffffffffffffffffffffffffff168152506000808473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600082015181600001908051906020019061058b9291906106f2565b5060208201518160010160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055509050505050565b6000602052806000526040600020600091509050806000018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156106865780601f1061065b57610100808354040283529160200191610686565b820191906000526020600020905b81548152906001019060200180831161066957829003601f168201915b5050505050908060010160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905082565b600181815481106106c357fe5b906000526020600020016000915054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061073357805160ff1916838001178555610761565b82800160010185558215610761579182015b82811115610760578251825591602001919060010190610745565b5b50905061076e9190610772565b5090565b61079491905b80821115610790576000816000905550600101610778565b5090565b9056fea265627a7a723158201593efb8d99968f88a24b8bd15cb9e099ca613a209f7a9224631072fef3e897564736f6c63430005100032",
+  "sourceMap": "66:656:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;66:656:0;;;;;;;",
+  "deployedSourceMap": "66:656:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;66:656:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;431:120;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;431:120:0;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;431:120:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;579:59;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;579:59:0;;;;;;;;;;;;;;;;;:::i;:::-;;644:76;;;:::i;:::-;;;;;;;;;;;;;;;;;;;254:171;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;254:171:0;;;;;;;;;;;;;;;;;;;;;21:11:-1;8;5:28;2:2;;;46:1;43;36:12;2:2;254:171:0;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;254:171:0;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;254:171:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;93:3;85:6;81:16;74:27;137:4;133:9;126:4;121:3;117:14;113:30;106:37;;169:3;161:6;157:16;147:26;;254:171:0;;;;;;;;;;;;;;;:::i;:::-;;172:43;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;172:43:0;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;172:43:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;221:26;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;221:26:0;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;431:120;488:13;518:6;:16;525:8;518:16;;;;;;;;;;;;;;;:26;;511:33;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;431:120;;;:::o;579:59::-;630:1;617:10;:14;;;;579:59;:::o;644:76::-;680:4;703:10;;696:17;;644:76;:::o;254:171::-;334:9;349:8;334:24;;39:1:-1;33:3;27:10;23:18;57:10;52:3;45:23;79:10;72:17;;0:93;334:24:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;387:31;;;;;;;;397:10;387:31;;;;409:8;387:31;;;;;368:6;:16;375:8;368:16;;;;;;;;;;;;;;;:50;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;254:171;;:::o;172:43::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;221:26::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;66:656::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity >=0.4.21 <0.7.0;\n\ncontract SimpleStorage {\n    struct AutoClaim {\n        string firstName;\n        address add;\n    }\n\n    mapping(address => AutoClaim) public claims;\n    address[] public addresses;\n\n    function fileClaim(address _address, string memory _firstName) public {\n        addresses.push(_address);\n        claims[_address] = AutoClaim(_firstName, _address);\n    }\n\n    function getClaim(address _address) public view returns (string memory) {\n      return claims[_address].firstName;\n    }\n\n    uint storedData;\n\n    function set(uint x) public {\n        storedData = x;\n    }\n\n    function get() public view returns (uint) {\n        return storedData;\n    }\n}\n",
+  "sourcePath": "C:/Users/n1555085/OneDrive - Liberty Mutual/Desktop/hackathonproject/david-long-fanclub/contracts/SimpleStorage.sol",
+>>>>>>> 5ac994d55f16104b64a9890f950cae100d5e1fc5
   "ast": {
-    "absolutePath": "/C/Users/n1554751/OneDrive - Liberty Mutual/Documents/truffleProject/david-long-fanclub/contracts/SimpleStorage.sol",
+    "absolutePath": "/C/Users/n1555085/OneDrive - Liberty Mutual/Desktop/hackathonproject/david-long-fanclub/contracts/SimpleStorage.sol",
     "exportedSymbols": {
       "SimpleStorage": [
+<<<<<<< HEAD
         50
       ]
     },
     "id": 51,
+=======
+        70
+      ]
+    },
+    "id": 71,
+>>>>>>> 5ac994d55f16104b64a9890f950cae100d5e1fc5
     "nodeType": "SourceUnit",
     "nodes": [
       {
@@ -127,9 +235,15 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
+<<<<<<< HEAD
         "id": 50,
         "linearizedBaseContracts": [
           50
+=======
+        "id": 70,
+        "linearizedBaseContracts": [
+          70
+>>>>>>> 5ac994d55f16104b64a9890f950cae100d5e1fc5
         ],
         "name": "SimpleStorage",
         "nodeType": "ContractDefinition",
@@ -194,7 +308,11 @@
             ],
             "name": "AutoClaim",
             "nodeType": "StructDefinition",
+<<<<<<< HEAD
             "scope": 50,
+=======
+            "scope": 70,
+>>>>>>> 5ac994d55f16104b64a9890f950cae100d5e1fc5
             "src": "95:71:0",
             "visibility": "public"
           },
@@ -203,7 +321,11 @@
             "id": 10,
             "name": "claims",
             "nodeType": "VariableDeclaration",
+<<<<<<< HEAD
             "scope": 50,
+=======
+            "scope": 70,
+>>>>>>> 5ac994d55f16104b64a9890f950cae100d5e1fc5
             "src": "172:43:0",
             "stateVariable": true,
             "storageLocation": "default",
@@ -240,6 +362,7 @@
                   "typeIdentifier": "t_struct$_AutoClaim_$6_storage_ptr",
                   "typeString": "struct SimpleStorage.AutoClaim"
                 }
+<<<<<<< HEAD
               }
             },
             "value": null,
@@ -277,16 +400,62 @@
               "typeDescriptions": {
                 "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
                 "typeString": "address[]"
+=======
+>>>>>>> 5ac994d55f16104b64a9890f950cae100d5e1fc5
               }
             },
             "value": null,
             "visibility": "public"
+<<<<<<< HEAD
+=======
+          },
+          {
+            "constant": false,
+            "id": 13,
+            "name": "addresses",
+            "nodeType": "VariableDeclaration",
+            "scope": 70,
+            "src": "221:26:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_address_$dyn_storage",
+              "typeString": "address[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 11,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "221:7:0",
+                "stateMutability": "nonpayable",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "id": 12,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "221:9:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                "typeString": "address[]"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+>>>>>>> 5ac994d55f16104b64a9890f950cae100d5e1fc5
           },
           {
             "body": {
               "id": 35,
               "nodeType": "Block",
+<<<<<<< HEAD
               "src": "320:95:0",
+=======
+              "src": "324:101:0",
+>>>>>>> 5ac994d55f16104b64a9890f950cae100d5e1fc5
               "statements": [
                 {
                   "expression": {
@@ -299,7 +468,11 @@
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 15,
+<<<<<<< HEAD
                         "src": "343:8:0",
+=======
+                        "src": "349:8:0",
+>>>>>>> 5ac994d55f16104b64a9890f950cae100d5e1fc5
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -320,7 +493,11 @@
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 13,
+<<<<<<< HEAD
                         "src": "328:9:0",
+=======
+                        "src": "334:9:0",
+>>>>>>> 5ac994d55f16104b64a9890f950cae100d5e1fc5
                         "typeDescriptions": {
                           "typeIdentifier": "t_array$_t_address_$dyn_storage",
                           "typeString": "address[] storage ref"
@@ -334,7 +511,11 @@
                       "memberName": "push",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": null,
+<<<<<<< HEAD
                       "src": "328:14:0",
+=======
+                      "src": "334:14:0",
+>>>>>>> 5ac994d55f16104b64a9890f950cae100d5e1fc5
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_arraypush_nonpayable$_t_address_$returns$_t_uint256_$",
                         "typeString": "function (address) returns (uint256)"
@@ -348,7 +529,11 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
+<<<<<<< HEAD
                     "src": "328:24:0",
+=======
+                    "src": "334:24:0",
+>>>>>>> 5ac994d55f16104b64a9890f950cae100d5e1fc5
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -356,7 +541,11 @@
                   },
                   "id": 25,
                   "nodeType": "ExpressionStatement",
+<<<<<<< HEAD
                   "src": "328:24:0"
+=======
+                  "src": "334:24:0"
+>>>>>>> 5ac994d55f16104b64a9890f950cae100d5e1fc5
                 },
                 {
                   "expression": {
@@ -375,7 +564,11 @@
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 10,
+<<<<<<< HEAD
                         "src": "360:6:0",
+=======
+                        "src": "368:6:0",
+>>>>>>> 5ac994d55f16104b64a9890f950cae100d5e1fc5
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_address_$_t_struct$_AutoClaim_$6_storage_$",
                           "typeString": "mapping(address => struct SimpleStorage.AutoClaim storage ref)"
@@ -389,7 +582,11 @@
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 15,
+<<<<<<< HEAD
                         "src": "367:8:0",
+=======
+                        "src": "375:8:0",
+>>>>>>> 5ac994d55f16104b64a9890f950cae100d5e1fc5
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -400,7 +597,11 @@
                       "isPure": false,
                       "lValueRequested": true,
                       "nodeType": "IndexAccess",
+<<<<<<< HEAD
                       "src": "360:16:0",
+=======
+                      "src": "368:16:0",
+>>>>>>> 5ac994d55f16104b64a9890f950cae100d5e1fc5
                       "typeDescriptions": {
                         "typeIdentifier": "t_struct$_AutoClaim_$6_storage",
                         "typeString": "struct SimpleStorage.AutoClaim storage ref"
@@ -418,7 +619,11 @@
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 17,
+<<<<<<< HEAD
                           "src": "389:10:0",
+=======
+                          "src": "397:10:0",
+>>>>>>> 5ac994d55f16104b64a9890f950cae100d5e1fc5
                           "typeDescriptions": {
                             "typeIdentifier": "t_string_memory_ptr",
                             "typeString": "string memory"
@@ -431,7 +636,11 @@
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 15,
+<<<<<<< HEAD
                           "src": "401:8:0",
+=======
+                          "src": "409:8:0",
+>>>>>>> 5ac994d55f16104b64a9890f950cae100d5e1fc5
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
                             "typeString": "address"
@@ -454,7 +663,11 @@
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 6,
+<<<<<<< HEAD
                         "src": "379:9:0",
+=======
+                        "src": "387:9:0",
+>>>>>>> 5ac994d55f16104b64a9890f950cae100d5e1fc5
                         "typeDescriptions": {
                           "typeIdentifier": "t_type$_t_struct$_AutoClaim_$6_storage_ptr_$",
                           "typeString": "type(struct SimpleStorage.AutoClaim storage pointer)"
@@ -468,13 +681,21 @@
                       "lValueRequested": false,
                       "names": [],
                       "nodeType": "FunctionCall",
+<<<<<<< HEAD
                       "src": "379:31:0",
+=======
+                      "src": "387:31:0",
+>>>>>>> 5ac994d55f16104b64a9890f950cae100d5e1fc5
                       "typeDescriptions": {
                         "typeIdentifier": "t_struct$_AutoClaim_$6_memory",
                         "typeString": "struct SimpleStorage.AutoClaim memory"
                       }
                     },
+<<<<<<< HEAD
                     "src": "360:50:0",
+=======
+                    "src": "368:50:0",
+>>>>>>> 5ac994d55f16104b64a9890f950cae100d5e1fc5
                     "typeDescriptions": {
                       "typeIdentifier": "t_struct$_AutoClaim_$6_storage",
                       "typeString": "struct SimpleStorage.AutoClaim storage ref"
@@ -482,7 +703,11 @@
                   },
                   "id": 34,
                   "nodeType": "ExpressionStatement",
+<<<<<<< HEAD
                   "src": "360:50:0"
+=======
+                  "src": "368:50:0"
+>>>>>>> 5ac994d55f16104b64a9890f950cae100d5e1fc5
                 }
               ]
             },
@@ -503,7 +728,11 @@
                   "name": "_address",
                   "nodeType": "VariableDeclaration",
                   "scope": 36,
+<<<<<<< HEAD
                   "src": "269:16:0",
+=======
+                  "src": "273:16:0",
+>>>>>>> 5ac994d55f16104b64a9890f950cae100d5e1fc5
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -514,7 +743,11 @@
                     "id": 14,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
+<<<<<<< HEAD
                     "src": "269:7:0",
+=======
+                    "src": "273:7:0",
+>>>>>>> 5ac994d55f16104b64a9890f950cae100d5e1fc5
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -530,7 +763,11 @@
                   "name": "_firstName",
                   "nodeType": "VariableDeclaration",
                   "scope": 36,
+<<<<<<< HEAD
                   "src": "287:24:0",
+=======
+                  "src": "291:24:0",
+>>>>>>> 5ac994d55f16104b64a9890f950cae100d5e1fc5
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -541,7 +778,11 @@
                     "id": 16,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
+<<<<<<< HEAD
                     "src": "287:6:0",
+=======
+                    "src": "291:6:0",
+>>>>>>> 5ac994d55f16104b64a9890f950cae100d5e1fc5
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -551,16 +792,27 @@
                   "visibility": "internal"
                 }
               ],
+<<<<<<< HEAD
               "src": "268:44:0"
+=======
+              "src": "272:44:0"
+>>>>>>> 5ac994d55f16104b64a9890f950cae100d5e1fc5
             },
             "returnParameters": {
               "id": 19,
               "nodeType": "ParameterList",
               "parameters": [],
+<<<<<<< HEAD
               "src": "320:0:0"
             },
             "scope": 50,
             "src": "250:165:0",
+=======
+              "src": "324:0:0"
+            },
+            "scope": 70,
+            "src": "254:171:0",
+>>>>>>> 5ac994d55f16104b64a9890f950cae100d5e1fc5
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
@@ -569,7 +821,11 @@
             "body": {
               "id": 48,
               "nodeType": "Block",
+<<<<<<< HEAD
               "src": "493:46:0",
+=======
+              "src": "503:48:0",
+>>>>>>> 5ac994d55f16104b64a9890f950cae100d5e1fc5
               "statements": [
                 {
                   "expression": {
@@ -583,7 +839,11 @@
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 10,
+<<<<<<< HEAD
                         "src": "508:6:0",
+=======
+                        "src": "518:6:0",
+>>>>>>> 5ac994d55f16104b64a9890f950cae100d5e1fc5
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_address_$_t_struct$_AutoClaim_$6_storage_$",
                           "typeString": "mapping(address => struct SimpleStorage.AutoClaim storage ref)"
@@ -597,7 +857,11 @@
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 38,
+<<<<<<< HEAD
                         "src": "515:8:0",
+=======
+                        "src": "525:8:0",
+>>>>>>> 5ac994d55f16104b64a9890f950cae100d5e1fc5
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -608,7 +872,11 @@
                       "isPure": false,
                       "lValueRequested": false,
                       "nodeType": "IndexAccess",
+<<<<<<< HEAD
                       "src": "508:16:0",
+=======
+                      "src": "518:16:0",
+>>>>>>> 5ac994d55f16104b64a9890f950cae100d5e1fc5
                       "typeDescriptions": {
                         "typeIdentifier": "t_struct$_AutoClaim_$6_storage",
                         "typeString": "struct SimpleStorage.AutoClaim storage ref"
@@ -622,7 +890,11 @@
                     "memberName": "firstName",
                     "nodeType": "MemberAccess",
                     "referencedDeclaration": 3,
+<<<<<<< HEAD
                     "src": "508:26:0",
+=======
+                    "src": "518:26:0",
+>>>>>>> 5ac994d55f16104b64a9890f950cae100d5e1fc5
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage",
                       "typeString": "string storage ref"
@@ -631,7 +903,11 @@
                   "functionReturnParameters": 42,
                   "id": 47,
                   "nodeType": "Return",
+<<<<<<< HEAD
                   "src": "501:33:0"
+=======
+                  "src": "511:33:0"
+>>>>>>> 5ac994d55f16104b64a9890f950cae100d5e1fc5
                 }
               ]
             },
@@ -652,7 +928,11 @@
                   "name": "_address",
                   "nodeType": "VariableDeclaration",
                   "scope": 49,
+<<<<<<< HEAD
                   "src": "439:16:0",
+=======
+                  "src": "449:16:0",
+>>>>>>> 5ac994d55f16104b64a9890f950cae100d5e1fc5
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -663,7 +943,11 @@
                     "id": 37,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
+<<<<<<< HEAD
                     "src": "439:7:0",
+=======
+                    "src": "449:7:0",
+>>>>>>> 5ac994d55f16104b64a9890f950cae100d5e1fc5
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -674,7 +958,11 @@
                   "visibility": "internal"
                 }
               ],
+<<<<<<< HEAD
               "src": "438:18:0"
+=======
+              "src": "448:18:0"
+>>>>>>> 5ac994d55f16104b64a9890f950cae100d5e1fc5
             },
             "returnParameters": {
               "id": 42,
@@ -686,7 +974,11 @@
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "scope": 49,
+<<<<<<< HEAD
                   "src": "478:13:0",
+=======
+                  "src": "488:13:0",
+>>>>>>> 5ac994d55f16104b64a9890f950cae100d5e1fc5
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -697,7 +989,11 @@
                     "id": 40,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
+<<<<<<< HEAD
                     "src": "478:6:0",
+=======
+                    "src": "488:6:0",
+>>>>>>> 5ac994d55f16104b64a9890f950cae100d5e1fc5
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -707,6 +1003,7 @@
                   "visibility": "internal"
                 }
               ],
+<<<<<<< HEAD
               "src": "477:15:0"
             },
             "scope": 50,
@@ -728,6 +1025,240 @@
       "exportedSymbols": {
         "SimpleStorage": [
           50
+=======
+              "src": "487:15:0"
+            },
+            "scope": 70,
+            "src": "431:120:0",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 51,
+            "name": "storedData",
+            "nodeType": "VariableDeclaration",
+            "scope": 70,
+            "src": "557:15:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 50,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "557:4:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 60,
+              "nodeType": "Block",
+              "src": "607:31:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 58,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 56,
+                      "name": "storedData",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 51,
+                      "src": "617:10:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 57,
+                      "name": "x",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 53,
+                      "src": "630:1:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "617:14:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 59,
+                  "nodeType": "ExpressionStatement",
+                  "src": "617:14:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 61,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "set",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 54,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 53,
+                  "name": "x",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 61,
+                  "src": "592:6:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 52,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "592:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "591:8:0"
+            },
+            "returnParameters": {
+              "id": 55,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "607:0:0"
+            },
+            "scope": 70,
+            "src": "579:59:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 68,
+              "nodeType": "Block",
+              "src": "686:34:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 66,
+                    "name": "storedData",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 51,
+                    "src": "703:10:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 65,
+                  "id": 67,
+                  "nodeType": "Return",
+                  "src": "696:17:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 69,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "get",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 62,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "656:2:0"
+            },
+            "returnParameters": {
+              "id": 65,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 64,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 69,
+                  "src": "680:4:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 63,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "680:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "679:6:0"
+            },
+            "scope": 70,
+            "src": "644:76:0",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 71,
+        "src": "66:656:0"
+      }
+    ],
+    "src": "32:691:0"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "/C/Users/n1555085/OneDrive - Liberty Mutual/Desktop/hackathonproject/david-long-fanclub/contracts/SimpleStorage.sol",
+      "exportedSymbols": {
+        "SimpleStorage": [
+          70
+>>>>>>> 5ac994d55f16104b64a9890f950cae100d5e1fc5
         ]
       }
     },
@@ -760,17 +1291,28 @@
           "documentation": null,
           "fullyImplemented": true,
           "linearizedBaseContracts": [
+<<<<<<< HEAD
             50
           ],
           "name": "SimpleStorage",
           "scope": 51
+=======
+            70
+          ],
+          "name": "SimpleStorage",
+          "scope": 71
+>>>>>>> 5ac994d55f16104b64a9890f950cae100d5e1fc5
         },
         "children": [
           {
             "attributes": {
               "canonicalName": "SimpleStorage.AutoClaim",
               "name": "AutoClaim",
+<<<<<<< HEAD
               "scope": 50,
+=======
+              "scope": 70,
+>>>>>>> 5ac994d55f16104b64a9890f950cae100d5e1fc5
               "visibility": "public"
             },
             "children": [
@@ -834,9 +1376,14 @@
           },
           {
             "attributes": {
+<<<<<<< HEAD
               "constant": false,
               "name": "claims",
               "scope": 50,
+=======
+              "constant": false,
+              "name": "claims",
+              "scope": 70,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "mapping(address => struct SimpleStorage.AutoClaim)",
@@ -848,6 +1395,571 @@
                 "attributes": {
                   "type": "mapping(address => struct SimpleStorage.AutoClaim)"
                 },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "address",
+                      "type": "address"
+                    },
+                    "id": 7,
+                    "name": "ElementaryTypeName",
+                    "src": "180:7:0"
+                  },
+                  {
+                    "attributes": {
+                      "contractScope": null,
+                      "name": "AutoClaim",
+                      "referencedDeclaration": 6,
+                      "type": "struct SimpleStorage.AutoClaim"
+                    },
+                    "id": 8,
+                    "name": "UserDefinedTypeName",
+                    "src": "191:9:0"
+                  }
+                ],
+                "id": 9,
+                "name": "Mapping",
+                "src": "172:29:0"
+              }
+            ],
+            "id": 10,
+            "name": "VariableDeclaration",
+            "src": "172:43:0"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "addresses",
+              "scope": 70,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "address[]",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "length": null,
+                  "type": "address[]"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "address",
+                      "stateMutability": "nonpayable",
+                      "type": "address"
+                    },
+                    "id": 11,
+                    "name": "ElementaryTypeName",
+                    "src": "221:7:0"
+                  }
+                ],
+                "id": 12,
+                "name": "ArrayTypeName",
+                "src": "221:9:0"
+              }
+            ],
+            "id": 13,
+            "name": "VariableDeclaration",
+            "src": "221:26:0"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "fileClaim",
+              "scope": 70,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_address",
+                      "scope": 36,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 14,
+                        "name": "ElementaryTypeName",
+                        "src": "273:7:0"
+                      }
+                    ],
+                    "id": 15,
+                    "name": "VariableDeclaration",
+                    "src": "273:16:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_firstName",
+                      "scope": 36,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 16,
+                        "name": "ElementaryTypeName",
+                        "src": "291:6:0"
+                      }
+                    ],
+                    "id": 17,
+                    "name": "VariableDeclaration",
+                    "src": "291:24:0"
+                  }
+                ],
+                "id": 18,
+                "name": "ParameterList",
+                "src": "272:44:0"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 19,
+                "name": "ParameterList",
+                "src": "324:0:0"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "uint256",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_address",
+                                  "typeString": "address"
+                                }
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "push",
+                              "referencedDeclaration": null,
+                              "type": "function (address) returns (uint256)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 13,
+                                  "type": "address[] storage ref",
+                                  "value": "addresses"
+                                },
+                                "id": 20,
+                                "name": "Identifier",
+                                "src": "334:9:0"
+                              }
+                            ],
+                            "id": 22,
+                            "name": "MemberAccess",
+                            "src": "334:14:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 15,
+                              "type": "address",
+                              "value": "_address"
+                            },
+                            "id": 23,
+                            "name": "Identifier",
+                            "src": "349:8:0"
+                          }
+                        ],
+                        "id": 24,
+                        "name": "FunctionCall",
+                        "src": "334:24:0"
+                      }
+                    ],
+                    "id": 25,
+                    "name": "ExpressionStatement",
+                    "src": "334:24:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "struct SimpleStorage.AutoClaim storage ref"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "type": "struct SimpleStorage.AutoClaim storage ref"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 10,
+                                  "type": "mapping(address => struct SimpleStorage.AutoClaim storage ref)",
+                                  "value": "claims"
+                                },
+                                "id": 26,
+                                "name": "Identifier",
+                                "src": "368:6:0"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 15,
+                                  "type": "address",
+                                  "value": "_address"
+                                },
+                                "id": 27,
+                                "name": "Identifier",
+                                "src": "375:8:0"
+                              }
+                            ],
+                            "id": 28,
+                            "name": "IndexAccess",
+                            "src": "368:16:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "isStructConstructorCall": true,
+                              "lValueRequested": false,
+                              "names": [
+                                null
+                              ],
+                              "type": "struct SimpleStorage.AutoClaim memory",
+                              "type_conversion": false
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": [
+                                    {
+                                      "typeIdentifier": "t_string_memory_ptr",
+                                      "typeString": "string memory"
+                                    },
+                                    {
+                                      "typeIdentifier": "t_address",
+                                      "typeString": "address"
+                                    }
+                                  ],
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 6,
+                                  "type": "type(struct SimpleStorage.AutoClaim storage pointer)",
+                                  "value": "AutoClaim"
+                                },
+                                "id": 29,
+                                "name": "Identifier",
+                                "src": "387:9:0"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 17,
+                                  "type": "string memory",
+                                  "value": "_firstName"
+                                },
+                                "id": 30,
+                                "name": "Identifier",
+                                "src": "397:10:0"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 15,
+                                  "type": "address",
+                                  "value": "_address"
+                                },
+                                "id": 31,
+                                "name": "Identifier",
+                                "src": "409:8:0"
+                              }
+                            ],
+                            "id": 32,
+                            "name": "FunctionCall",
+                            "src": "387:31:0"
+                          }
+                        ],
+                        "id": 33,
+                        "name": "Assignment",
+                        "src": "368:50:0"
+                      }
+                    ],
+                    "id": 34,
+                    "name": "ExpressionStatement",
+                    "src": "368:50:0"
+                  }
+                ],
+                "id": 35,
+                "name": "Block",
+                "src": "324:101:0"
+              }
+            ],
+            "id": 36,
+            "name": "FunctionDefinition",
+            "src": "254:171:0"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getClaim",
+              "scope": 70,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_address",
+                      "scope": 49,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 37,
+                        "name": "ElementaryTypeName",
+                        "src": "449:7:0"
+                      }
+                    ],
+                    "id": 38,
+                    "name": "VariableDeclaration",
+                    "src": "449:16:0"
+                  }
+                ],
+                "id": 39,
+                "name": "ParameterList",
+                "src": "448:18:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 49,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 40,
+                        "name": "ElementaryTypeName",
+                        "src": "488:6:0"
+                      }
+                    ],
+                    "id": 41,
+                    "name": "VariableDeclaration",
+                    "src": "488:13:0"
+                  }
+                ],
+                "id": 42,
+                "name": "ParameterList",
+                "src": "487:15:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 42
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "member_name": "firstName",
+                          "referencedDeclaration": 3,
+                          "type": "string storage ref"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "type": "struct SimpleStorage.AutoClaim storage ref"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 10,
+                                  "type": "mapping(address => struct SimpleStorage.AutoClaim storage ref)",
+                                  "value": "claims"
+                                },
+                                "id": 43,
+                                "name": "Identifier",
+                                "src": "518:6:0"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 38,
+                                  "type": "address",
+                                  "value": "_address"
+                                },
+                                "id": 44,
+                                "name": "Identifier",
+                                "src": "525:8:0"
+                              }
+                            ],
+                            "id": 45,
+                            "name": "IndexAccess",
+                            "src": "518:16:0"
+                          }
+                        ],
+                        "id": 46,
+                        "name": "MemberAccess",
+                        "src": "518:26:0"
+                      }
+                    ],
+                    "id": 47,
+                    "name": "Return",
+                    "src": "511:33:0"
+                  }
+                ],
+                "id": 48,
+                "name": "Block",
+                "src": "503:48:0"
+              }
+            ],
+            "id": 49,
+            "name": "FunctionDefinition",
+            "src": "431:120:0"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "storedData",
+              "scope": 70,
+>>>>>>> 5ac994d55f16104b64a9890f950cae100d5e1fc5
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "mapping(address => struct SimpleStorage.AutoClaim)",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "type": "mapping(address => struct SimpleStorage.AutoClaim)"
+                },
+<<<<<<< HEAD
                 "children": [
                   {
                     "attributes": {
@@ -916,6 +2028,16 @@
             "id": 13,
             "name": "VariableDeclaration",
             "src": "219:26:0"
+=======
+                "id": 50,
+                "name": "ElementaryTypeName",
+                "src": "557:4:0"
+              }
+            ],
+            "id": 51,
+            "name": "VariableDeclaration",
+            "src": "557:15:0"
+>>>>>>> 5ac994d55f16104b64a9890f950cae100d5e1fc5
           },
           {
             "attributes": {
@@ -926,8 +2048,13 @@
               "modifiers": [
                 null
               ],
+<<<<<<< HEAD
               "name": "fileClaim",
               "scope": 50,
+=======
+              "name": "set",
+              "scope": 70,
+>>>>>>> 5ac994d55f16104b64a9890f950cae100d5e1fc5
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "public"
@@ -938,8 +2065,13 @@
                   {
                     "attributes": {
                       "constant": false,
+<<<<<<< HEAD
                       "name": "_address",
                       "scope": 36,
+=======
+                      "name": "x",
+                      "scope": 61,
+>>>>>>> 5ac994d55f16104b64a9890f950cae100d5e1fc5
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -979,6 +2111,7 @@
                           "name": "string",
                           "type": "string"
                         },
+<<<<<<< HEAD
                         "id": 16,
                         "name": "ElementaryTypeName",
                         "src": "287:6:0"
@@ -992,6 +2125,21 @@
                 "id": 18,
                 "name": "ParameterList",
                 "src": "268:44:0"
+=======
+                        "id": 52,
+                        "name": "ElementaryTypeName",
+                        "src": "592:4:0"
+                      }
+                    ],
+                    "id": 53,
+                    "name": "VariableDeclaration",
+                    "src": "592:6:0"
+                  }
+                ],
+                "id": 54,
+                "name": "ParameterList",
+                "src": "591:8:0"
+>>>>>>> 5ac994d55f16104b64a9890f950cae100d5e1fc5
               },
               {
                 "attributes": {
@@ -1000,9 +2148,15 @@
                   ]
                 },
                 "children": [],
+<<<<<<< HEAD
                 "id": 19,
                 "name": "ParameterList",
                 "src": "320:0:0"
+=======
+                "id": 55,
+                "name": "ParameterList",
+                "src": "607:0:0"
+>>>>>>> 5ac994d55f16104b64a9890f950cae100d5e1fc5
               },
               {
                 "children": [
@@ -1065,6 +2219,7 @@
                               "overloadedDeclarations": [
                                 null
                               ],
+<<<<<<< HEAD
                               "referencedDeclaration": 15,
                               "type": "address",
                               "value": "_address"
@@ -1138,6 +2293,15 @@
                             "id": 28,
                             "name": "IndexAccess",
                             "src": "360:16:0"
+=======
+                              "referencedDeclaration": 51,
+                              "type": "uint256",
+                              "value": "storedData"
+                            },
+                            "id": 56,
+                            "name": "Identifier",
+                            "src": "617:10:0"
+>>>>>>> 5ac994d55f16104b64a9890f950cae100d5e1fc5
                           },
                           {
                             "attributes": {
@@ -1150,6 +2314,7 @@
                               "names": [
                                 null
                               ],
+<<<<<<< HEAD
                               "type": "struct SimpleStorage.AutoClaim memory",
                               "type_conversion": false
                             },
@@ -1229,6 +2394,35 @@
             "id": 36,
             "name": "FunctionDefinition",
             "src": "250:165:0"
+=======
+                              "referencedDeclaration": 53,
+                              "type": "uint256",
+                              "value": "x"
+                            },
+                            "id": 57,
+                            "name": "Identifier",
+                            "src": "630:1:0"
+                          }
+                        ],
+                        "id": 58,
+                        "name": "Assignment",
+                        "src": "617:14:0"
+                      }
+                    ],
+                    "id": 59,
+                    "name": "ExpressionStatement",
+                    "src": "617:14:0"
+                  }
+                ],
+                "id": 60,
+                "name": "Block",
+                "src": "607:31:0"
+              }
+            ],
+            "id": 61,
+            "name": "FunctionDefinition",
+            "src": "579:59:0"
+>>>>>>> 5ac994d55f16104b64a9890f950cae100d5e1fc5
           },
           {
             "attributes": {
@@ -1239,14 +2433,20 @@
               "modifiers": [
                 null
               ],
+<<<<<<< HEAD
               "name": "getClaim",
               "scope": 50,
+=======
+              "name": "get",
+              "scope": 70,
+>>>>>>> 5ac994d55f16104b64a9890f950cae100d5e1fc5
               "stateMutability": "view",
               "superFunction": null,
               "visibility": "public"
             },
             "children": [
               {
+<<<<<<< HEAD
                 "children": [
                   {
                     "attributes": {
@@ -1279,6 +2479,17 @@
                 "id": 39,
                 "name": "ParameterList",
                 "src": "438:18:0"
+=======
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 62,
+                "name": "ParameterList",
+                "src": "656:2:0"
+>>>>>>> 5ac994d55f16104b64a9890f950cae100d5e1fc5
               },
               {
                 "children": [
@@ -1286,7 +2497,11 @@
                     "attributes": {
                       "constant": false,
                       "name": "",
+<<<<<<< HEAD
                       "scope": 49,
+=======
+                      "scope": 69,
+>>>>>>> 5ac994d55f16104b64a9890f950cae100d5e1fc5
                       "stateVariable": false,
                       "storageLocation": "memory",
                       "type": "string",
@@ -1299,6 +2514,7 @@
                           "name": "string",
                           "type": "string"
                         },
+<<<<<<< HEAD
                         "id": 40,
                         "name": "ElementaryTypeName",
                         "src": "478:6:0"
@@ -1312,17 +2528,37 @@
                 "id": 42,
                 "name": "ParameterList",
                 "src": "477:15:0"
+=======
+                        "id": 63,
+                        "name": "ElementaryTypeName",
+                        "src": "680:4:0"
+                      }
+                    ],
+                    "id": 64,
+                    "name": "VariableDeclaration",
+                    "src": "680:4:0"
+                  }
+                ],
+                "id": 65,
+                "name": "ParameterList",
+                "src": "679:6:0"
+>>>>>>> 5ac994d55f16104b64a9890f950cae100d5e1fc5
               },
               {
                 "children": [
                   {
                     "attributes": {
+<<<<<<< HEAD
                       "functionReturnParameters": 42
+=======
+                      "functionReturnParameters": 65
+>>>>>>> 5ac994d55f16104b64a9890f950cae100d5e1fc5
                     },
                     "children": [
                       {
                         "attributes": {
                           "argumentTypes": null,
+<<<<<<< HEAD
                           "isConstant": false,
                           "isLValue": true,
                           "isPure": false,
@@ -1404,6 +2640,43 @@
     "id": 51,
     "name": "SourceUnit",
     "src": "32:685:0"
+=======
+                          "overloadedDeclarations": [
+                            null
+                          ],
+                          "referencedDeclaration": 51,
+                          "type": "uint256",
+                          "value": "storedData"
+                        },
+                        "id": 66,
+                        "name": "Identifier",
+                        "src": "703:10:0"
+                      }
+                    ],
+                    "id": 67,
+                    "name": "Return",
+                    "src": "696:17:0"
+                  }
+                ],
+                "id": 68,
+                "name": "Block",
+                "src": "686:34:0"
+              }
+            ],
+            "id": 69,
+            "name": "FunctionDefinition",
+            "src": "644:76:0"
+          }
+        ],
+        "id": 70,
+        "name": "ContractDefinition",
+        "src": "66:656:0"
+      }
+    ],
+    "id": 71,
+    "name": "SourceUnit",
+    "src": "32:691:0"
+>>>>>>> 5ac994d55f16104b64a9890f950cae100d5e1fc5
   },
   "compiler": {
     "name": "solc",
@@ -1413,12 +2686,21 @@
     "5777": {
       "events": {},
       "links": {},
+<<<<<<< HEAD
       "address": "0x64eB0858f42b23B7159D9b27C703fAf9fD50F453",
       "transactionHash": "0x1131d95a8bce75367fcbc7acb47f9adfdbe258a93bac260facb9af430970ede1"
     }
   },
   "schemaVersion": "3.4.1",
   "updatedAt": "2021-07-15T21:22:34.257Z",
+=======
+      "address": "0x1d1611eFeC46e84fc4c31C2dA8fFB9702c42564c",
+      "transactionHash": "0xef87603a12e26c2b5f8fcb5ce5af4e05582052257aaa891ab8c4e3a47f096cc5"
+    }
+  },
+  "schemaVersion": "3.4.1",
+  "updatedAt": "2021-07-15T20:21:13.061Z",
+>>>>>>> 5ac994d55f16104b64a9890f950cae100d5e1fc5
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}
