@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import SimpleStorageContract from "./contracts/SimpleStorage.json";
 import getWeb3 from "./getWeb3";
 import HeaderSection from "./components/header/header";
@@ -71,12 +71,73 @@ import "./App.css";
 //     );
 //   }
 // }
-
 function App() {
+  // sets state for the smart contract
+  const [counterState, setCounterState] = useState({
+    count: 0,
+    web3: null,
+    storageContract: null,
+    account: null
+  })
+
+  // creates states for solidity methods
+  const [solidityMethods, setSolidityMethods] = useState({});
+
+  const initalizeContract = async () => {
+    try {
+
+      // injects web3 and network into client
+      const web3 = await getWeb3();
+
+      // gets account from metamask
+      const accounts = await web3.eth.getAccounts();
+
+      // Get the contract instance
+      const networkId = await web3.eth.net.getId();
+      let deployedNetwork = SimpleStorageContract.networks[networkId];
+      const storageInstance = new web3.eth.Contract(
+        SimpleStorageContract.abi,
+        deployedNetwork && deployedNetwork.address
+      );
+      
+      // changes state of contract property
+      setCounterState( [...counterState, 
+        {storageContract: storageInstance,
+         accounts: accounts
+        }]) //this.runExample 
+    } catch (error) {
+      alert("Failed to load web3, accounts, or contract. Check console for details.");
+      console.error(error);
+    }
+    
+  }
+
+  useEffect(() => {
+    initalizeContract();
+  }, [])
+
+  const settingData = async (accounts, storageContract) => {
+
+    // modify storedData var using set function
+    await storageContract.methods.set(5).send({ from: accounts[0] });
+
+    // call the get method from SmartClaims contract
+    const storageResponse = await storageContract.methods.get().call();
+
+    setSolidityMethods({
+      storageContract: storageResponse
+    })
+  }
+
+
+
   return (
     <div className="App">
       <HeaderSection />
       <Registration />
+      <div>
+        <h1>The stored data is: {solidityMethods.storageContract}</h1>
+      </div>
       {/* <h1>Good to Go!</h1>
       <p>Your Truffle Box is installed and ready.</p>
       <h2>Smart Contract Example</h2>
