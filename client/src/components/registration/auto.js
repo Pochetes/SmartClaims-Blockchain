@@ -1,9 +1,30 @@
 import React, { useState, useEffect } from "react";
 import { Header, Message, Menu, Accordion, Icon, Form, Button, Container, Checkbox } from "semantic-ui-react";
+import Web3 from "web3";
+import { isContractAddressInBloom } from "web3-utils";
 
-export default function Auto({ handleItemClick, value }) {
-    const [activeIndex, setActiveIndex] = useState();
-    var index;
+export default function Auto({ handleItemClick, value, account, contract, web3 }) {
+	const [activeIndex, setActiveIndex] = useState();
+	const [inputs, setInputs] = useState({});
+	var index;
+
+	const handleChange = async (e) => {
+		setInputs({...inputs, indexPos: e.target.index, [e.target.name]: e.target.value });
+		console.log(inputs)
+	}
+
+	const handleSubmit = async () => {
+		const accounts = await web3.eth.getAccounts
+		// first section
+
+		// here we will fire the functions from our smart contracts
+		// and pass in all of the parameters based on user input
+
+		// contract.methods.fileAutoClaimfirst(
+		// 	accounts[0],
+			
+		// )
+	}
     
     return (
 
@@ -55,43 +76,83 @@ export default function Auto({ handleItemClick, value }) {
 			<Form>
 				<Form.Field>
 				<label>First Name</label>
-				<input placeholder='First Name' />
+				<input
+				index= {0}
+				name="First Name" 
+				onChange={handleChange}
+				placeholder='First Name' />
 				</Form.Field>
 				<Form.Field>
 				<label>Last Name</label>
-				<input placeholder='Last Name' />
+				<input
+				index={0}
+				name="Last Name" 
+				onChange={handleChange}
+				placeholder='Last Name' />
 				</Form.Field>
 				<Form.Field>
 				<label>Gender</label>
-				<input placeholder='Gender' />
+				<input
+				index={0}
+				name="Gender"  
+				onChange={handleChange}
+				placeholder='Gender' />
 				</Form.Field>
 				<Form.Field>
 				<label>Date of Birth</label>
-				<input placeholder='Date of Birth' />
+				<input
+				index={0}
+				name="Date of Birth" 
+				onChange={handleChange}
+				placeholder='Date of Birth' />
 				</Form.Field>
 				<Form.Field>
 				<label>License Number</label>
-				<input placeholder='License Number' />
+				<input 
+				index={0}
+				name="License Number"
+				onChange={handleChange}
+				placeholder='License Number' />
 				</Form.Field>
 				<Form.Field>
 				<label>Phone Number</label>
-				<input placeholder='Phone Number' />
+				<input
+				index={0}
+				name="Phone Number" 
+				onChange={handleChange}
+				placeholder='Phone Number' />
 				</Form.Field>
 				<Form.Field>
 				<label>Policy Number</label>
-				<input placeholder='Policy Number' />
+				<input
+				index={0}
+				name="Policy Number" 
+				onChange={handleChange}
+				placeholder='Policy Number' />
 				</Form.Field>
 				<Form.Field>
 				<label>City</label>
-				<input placeholder='City' />
+				<input
+				index={0}
+				name="City" 
+				onChange={handleChange}
+				placeholder='City' />
 				</Form.Field>
 				<Form.Field>
 				<label>State</label>
-				<input placeholder='State' />
+				<input
+				index={0}
+				name="State" 
+				onChange={handleChange}
+				placeholder='State' />
 				</Form.Field>
 				<Form.Field>
 				<label>ZipCode</label>
-				<input placeholder='Zipcode' />
+				<input
+				index={0}
+				name="ZipCode" 
+				onChange={handleChange}
+				placeholder='Zipcode' />
 				</Form.Field>
 			</Form>
 			</Accordion.Content>
@@ -109,23 +170,43 @@ export default function Auto({ handleItemClick, value }) {
 			<Form>
 				<Form.Field>
 						<label>Make</label>
-						<input placeholder='Make' />
+						<input
+						index={1}
+						name="Make" 
+						onChange={handleChange}
+						placeholder='Make' />
 				</Form.Field>
 				<Form.Field>
 						<label>Model</label>
-						<input placeholder='Model' />
+						<input
+						index={1}
+						name="Model" 
+						onChange={handleChange}
+						placeholder='Model' />
 				</Form.Field>
 				<Form.Field>
 						<label>Year</label>
-						<input placeholder='Year' />
+						<input
+						index={1}
+						name="Year" 
+						onChange={handleChange}
+						placeholder='Year' />
 				</Form.Field> 
 				<Form.Field>
 						<label>Color</label>
-						<input placeholder='Color' />
+						<input
+						index={1} 
+						name="Color"
+						onChange={handleChange}
+						placeholder='Color' />
 				</Form.Field> 
 				<Form.Field>
 						<label>License Plate Number</label>
-						<input placeholder='Plate Number' />
+						<input
+						index={1}
+						name="License Plate Number" 
+						onChange={handleChange}
+						placeholder='Plate Number' />
 				</Form.Field>                 
 			</Form>
 			</Accordion.Content>
@@ -143,35 +224,67 @@ export default function Auto({ handleItemClick, value }) {
 			<Form>
 				<Form.Field>
 						<label>Date of Accident</label>
-						<input placeholder='Date' />
+						<input
+						index={2}
+						name="Date of Accident" 
+						onChange={handleChange}
+						placeholder='Date' />
 				</Form.Field>
 				<Form.Field>
 						<label>Time of Accident</label>
-						<input placeholder='Time' />
+						<input
+						index={2}
+						name="Time of Accident" 
+						onChange={handleChange}
+						placeholder='Time' />
 				</Form.Field>
 				<Form.Field>
 						<label>Location</label>
-						<input placeholder='Location' />
+						<input
+						index={2} 
+						name="Location"
+						onChange={handleChange}
+						placeholder='Location' />
 				</Form.Field>
 				<Form.Field>
 						<label>Driver Name</label>
-						<input placeholder='Driver Name' />
+						<input
+						index={2}
+						name="Driver Name" 
+						onChange={handleChange}
+						placeholder='Driver Name' />
 				</Form.Field>
 				<Form.Field>
 						<label>Was the vehicle towed?</label>
-						<input placeholder='Vehicles Towed' />
+						<input
+						index={2}
+						name="Was the vehicle towed" 
+						onChange={handleChange}
+						placeholder='Vehicles Towed' />
 				</Form.Field>
 				<Form.Field>
 						<label>How many passengers were in the car, if any?</label>
-						<input placeholder='Number of Passengers' />
+						<input
+						index={2}
+						name="How many passengers" 
+						onChange={handleChange}
+						placeholder='Number of Passengers' />
 				</Form.Field>
 				<Form.Field>
 						<label>How many cars were involved?</label>
-						<input placeholder='Number of Cars' />
+						<input
+						index={2}
+						name="How many cars" 
+						onChange={handleChange}
+						placeholder='Number of Cars' />
 				</Form.Field>
 				<Form.Field>
 						<label>Where on the car is there damage?</label>
-						<input placeholder='Car Damage' />
+						<input
+						index={2}
+						name="Car damage" 
+						onChange={handleChange}
+						placeholder='Car Damage' />
 				</Form.Field>             
 			</Form>
 			</Accordion.Content>
@@ -189,27 +302,51 @@ export default function Auto({ handleItemClick, value }) {
 			<Form>
 				<Form.Field>
 						<label>First Name</label>
-						<input placeholder='First Name' />
+						<input
+						index={3}
+						name="First Name" 
+						onChange={handleChange}
+						placeholder='First Name' />
 				</Form.Field>
 				<Form.Field>
 						<label>Last Name</label>
-						<input placeholder='Last Name' />
+						<input
+						index={3}
+						name="Last Name" 
+						onChange={handleChange}
+						placeholder='Last Name' />
 				</Form.Field>
 				<Form.Field>
 						<label>Phone Number</label>
-						<input placeholder='Phone Number' />
+						<input
+						index={3} 
+						name="Phone Number"
+						onChange={handleChange}
+						placeholder='Phone Number' />
 				</Form.Field>
 				<Form.Field>
 						<label>Vehicle Make</label>
-						<input placeholder='Make' />
+						<input
+						index={3}
+						name="Vehicle Make" 
+						onChange={handleChange}
+						placeholder='Make' />
 				</Form.Field>
 				<Form.Field>
 						<label>Vehicle Model</label>
-						<input placeholder='Model' />
+						<input
+						index={3}
+						name="Vehicle Model" 
+						onChange={handleChange}
+						placeholder='Model' />
 				</Form.Field>
 				<Form.Field>
 						<label>Vehicle Year</label>
-						<input placeholder='Year' />
+						<input
+						index={3}
+						name="Vehicle Year" 
+						onChange={handleChange}
+						placeholder='Year' />
 				</Form.Field>             
 			</Form>
 			</Accordion.Content>
@@ -227,7 +364,11 @@ export default function Auto({ handleItemClick, value }) {
 			<Form>
 				<Form.Field>
 						<label>Explanation</label>
-						<input placeholder='Explain the incident...' />
+						<input 
+						index={4}
+						name="Explanation"
+						onChange={handleChange}
+						placeholder='Explain the incident...' />
 				</Form.Field>           
 			</Form>
 			</Accordion.Content>
@@ -239,7 +380,10 @@ export default function Auto({ handleItemClick, value }) {
 			<Form.Field>
 				<Checkbox label='I agree to the Terms and Conditions' />
 			</Form.Field>
-			<Button type='submit' style={{ marginTop: 15 }}>Submit</Button>
+			<Button
+			onClick={() => {handleSubmit()}} 
+			type='submit' 
+			style={{ marginTop: 15 }}>Submit</Button>
 		</Container>
         </>
     )
