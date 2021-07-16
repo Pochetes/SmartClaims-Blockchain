@@ -63,7 +63,7 @@ class App extends Component {
            {/* {<h1>The stored data is: {solidityMethods.storageContract}</h1>} */}
         </div>
         {/* <div>The stored value is: {this.state.storageValue}</div> */}
-        <div>The first name for claim of address is: {this.state.storageValue}</div>
+        {/* <div>The first name for claim of address is: {this.state.storageValue}</div> */}
       </div>
     );
   }
