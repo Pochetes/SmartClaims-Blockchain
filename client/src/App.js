@@ -1,5 +1,5 @@
 import React, { useState, useEffect, Component } from "react";
-import SimpleStorageContract from "./contracts/SimpleStorage.json";
+import SmartClaimsContract from "./contracts/SmartClaims.json";
 import getWeb3 from "./getWeb3";
 import HeaderSection from "./components/header/header";
 import Registration from "./components/registration/registration";
@@ -13,139 +13,21 @@ class App extends Component {
     try {
       // Get network provider and web3 instance.
       const web3 = await getWeb3();
-<<<<<<< HEAD
 
       // Use web3 to get the user's accounts.
       const accounts = await web3.eth.getAccounts();
 
       // Get the contract instance.
       const networkId = await web3.eth.net.getId();
-      const deployedNetwork = SimpleStorageContract.networks[networkId];
-      const instance = new web3.eth.Contract(
-        SimpleStorageContract.abi,
+      let deployedNetwork = SmartClaimsContract.networks[networkId];
+      const storageInstance = new web3.eth.Contract(
+        SmartClaimsContract.abi,
         deployedNetwork && deployedNetwork.address,
       );
-
+   
       // Set web3, accounts, and contract to the state, and then proceed with an
       // example of interacting with the contract's methods.
-      this.setState({ web3, accounts, contract: instance }, this.runExample);
-    } catch (error) {
-      // Catch any errors for any of the above operations.
-      alert(
-        `Failed to load web3, accounts, or contract. Check console for details.`,
-      );
-      console.error(error);
-    }
-  };
-
-  // runExample = async () => {
-  //   const { accounts, contract } = this.state;
-
-  //   // Stores a given value, 5 by default.
-  //   // await contract.methods.set(10).send({ from: accounts[0] });
-
-  //   // Get the value from the contract to prove it worked.
-  //   const response = await contract.methods.get().call();
-
-  //   // Update state with the result.
-  //   this.setState({ storageValue: response });
-  // };
-
-  render() {
-    if (!this.state.web3) {
-      return <div>Loading Web3, accounts, and contract...</div>;
-    }
-    return (
-      <div className="App">
-        <HeaderSection />
-        <Registration
-        account={this.state.contract}
-        contract={this.state.contract} 
-        web3={this.state.web3}
-        />
-        <div>The stored value is: {this.state.storageValue}</div>
-      </div>
-    );
-  }
-}
-// function App() {
-//   // sets state for the smart contract
-//   const [counterState, setCounterState] = useState({
-//     count: 0,
-//     web3: null,
-//     storageContract: null,
-//     accounts: null
-//   })
-
-//   // creates states for solidity methods
-//   const [solidityMethods, setSolidityMethods] = useState({});
-
-//   const initalizeContract = async () => {
-//     try {
-
-//       // injects web3 and network into client
-//       const web3 = await getWeb3();
-//       console.log("web3: ")
-//       console.log(web3)
-
-//       // gets account from metamask
-//       const accounts = await web3.eth.getAccounts();
-//       console.log("made it here!")
-//       console.log(accounts)
-
-//       // Get the contract instance
-//       const networkId = await web3.eth.net.getId();
-//       let deployedNetwork = SimpleStorageContract.networks[networkId];
-//       const storageInstance = new web3.eth.Contract(
-//         SimpleStorageContract.abi,
-//         deployedNetwork && deployedNetwork.address
-//       );
-      
-//       // changes state of contract property
-//       setCounterState( [...counterState, 
-//         {storageContract: storageInstance,
-//          accounts: accounts
-//         }]) //this.runExample 
-//         console.log(counterState)
-//     } catch (error) {
-//       alert("Failed to load web3, accounts, or contract. Check console for details.");
-//       console.error(error);
-//     }
-    
-//   }
-
-//   useEffect(() => {
-//     initalizeContract();
-//   }, [])
-
-//   const settingData = async (accounts, storageContract) => {
-
-//     // modify storedData var using set function
-//     await storageContract.methods.set(5).send({ from: accounts[0] });
-
-//     // call the get method from SmartClaims contract
-//     const storageResponse = await storageContract.methods.get().call();
-
-//     setSolidityMethods({
-//       storageContract: storageResponse
-//     })
-//   }
-=======
-
-      // Use web3 to get the user's accounts.
-      const accounts = await web3.eth.getAccounts();
-
-      // Get the contract instance.
-      const networkId = await web3.eth.net.getId();
-      const deployedNetwork = SimpleStorageContract.networks[networkId];
-      const instance = new web3.eth.Contract(
-        SimpleStorageContract.abi,
-        deployedNetwork && deployedNetwork.address,
-      );
-
-      // Set web3, accounts, and contract to the state, and then proceed with an
-      // example of interacting with the contract's methods.
-      this.setState({ web3, accounts, contract: instance }, this.fileAuto);
+      this.setState({ web3, accounts, storageContract: storageInstance }, this.runExample);
     } catch (error) {
       // Catch any errors for any of the above operations.
       alert(
@@ -156,52 +38,19 @@ class App extends Component {
   };
 
   runExample = async () => {
-    const { accounts, contract } = this.state;
+    const { accounts, storageContract } = this.state;
 
     // Stores a given value, 5 by default.
-    await contract.methods.set(5).send({ from: accounts[0] });
+    await storageContract.methods.set(5).send({ from: accounts[0] });
 
     // Get the value from the contract to prove it worked.
-    const response = await contract.methods.get().call();
+    const storageResponse = await storageContract.methods.get().call();
 
     // Update state with the result.
-    //this.setState({ storageValue: response });
+    this.setState({ storageValue: storageResponse });
   };
->>>>>>> 5ac994d55f16104b64a9890f950cae100d5e1fc5
 
-  fileAuto = async () => {
-    const { accounts, contract } = this.state;
-    
-    // filer address 0xdb489938F8c967e87DEF6Abf4410f93269A56b5c
-    await contract.methods.fileClaim(accounts[0], "josh").send({ from: accounts[0] });
-    const response = await contract.methods.getClaim(accounts[0]).call();
 
-    this.setState({ storageValue: response });
-  }
-
-<<<<<<< HEAD
-//   return (
-//     <div className="App">
-//       <HeaderSection />
-//       <Registration />
-//       <div>
-//         <h1>The stored data is: {solidityMethods.storageContract}</h1>
-//       </div>
-//       {/* <h1>Good to Go!</h1>
-//       <p>Your Truffle Box is installed and ready.</p>
-//       <h2>Smart Contract Example</h2>
-//       <p>
-//         If your contracts compiled and migrated successfully, below will show
-//         a stored value of 5 (by default).
-//       </p>
-//       <p>
-//         Try changing the value stored on <strong>line 42</strong> of App.js.
-//       </p>
-//       <div>The stored value is: {this.state.storageValue}</div> */}
-//     </div>
-//         );
-// }
-=======
   render() {
     if (!this.state.web3) {
       return <div>Loading Web3, accounts, and contract...</div>;
@@ -219,6 +68,5 @@ class App extends Component {
     );
   }
 }
->>>>>>> 5ac994d55f16104b64a9890f950cae100d5e1fc5
 
 export default App;

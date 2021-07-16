@@ -6,7 +6,9 @@ export default function HeaderSection() {
     
     return (
         <>
-        <Menu>
+        <Menu
+        style={{backgroundColor: "#FFD000"}}
+        >
             <Menu.Item header>SmartClaims</Menu.Item>
             <Menu.Item
             header
