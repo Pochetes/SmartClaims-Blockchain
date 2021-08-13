@@ -1,8 +1,4 @@
-# David Long Fanclub
-
-| Environment   | Type          | Status        | Days Since Last Deployment |
-| truffle       | ------------- | ------------- | -------------------------- |
-<!-- /forge.header -->
+# SmartClaims - Liberty Mutual 2021 TechStart Hackathon
 
 # What is SmartClaims?
 SmartClaims is a secure and simple way to store claims on an Ethereum blockchain. Through using SmartClaims, Liberty Mutual can leverage the security and scalability that comes with a network of smart contracts.
