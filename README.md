@@ -1,21 +1,8 @@
 # David Long Fanclub
-<!-- forge.header -->
-[![CloudForge Console][console_shield]][console_url] [![Open PRs][pr_shield]][pr_url]
 
 | Environment   | Type          | Status        | Days Since Last Deployment |
 | truffle       | ------------- | ------------- | -------------------------- |
 <!-- /forge.header -->
-
-<!-- Add your content here -->
-<<<<<<< HEAD
-Welcome to your new git repository!
-
-My commit - Roberto
-
-
-
-=======
->>>>>>> 13264341d12d37986e1f503683933e07f139e4be
 
 # What is SmartClaims?
 SmartClaims is a secure and simple way to store claims on an Ethereum blockchain. Through using SmartClaims, Liberty Mutual can leverage the security and scalability that comes with a network of smart contracts.
